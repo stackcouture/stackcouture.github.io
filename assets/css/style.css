@@ -578,6 +578,15 @@ small {
   margin-bottom: 10px !important;
 }
 
+@media (max-width: 600px) {
+  .company-header {
+    flex-wrap: wrap !important;
+  }
+  .company-header .role {
+    margin-top: 4px;
+  }
+}
+
 @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
