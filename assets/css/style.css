@@ -678,6 +678,180 @@ small {
     line-height: 1.7;
   }
 
+  #about {
+    background: #f8f9fa;
+    padding: 60px 0;
+    font-family: "Poppins", "Inter", sans-serif;
+  }
+
+  .about-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  }
+
+  .about-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #009688;
+    font-weight: 600;
+  }
+
+  .skills-box {
+    margin-top: 25px;
+    padding: 20px 25px;
+    background: #f9fafa;
+    border-left: 4px solid #009688;
+    border-radius: 8px;
+  }
+
+  .skills-box h5 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #009688;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills-list li {
+    padding: 6px 0;
+    font-size: 0.96rem;
+  }
+
+  .opportunity-box {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .opportunity-box p {
+    font-size: 1.05rem;
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px 25px;
+    text-transform: none;
+  }
+
+  @media (max-width: 768px) {
+    .about-card {
+      padding: 25px;
+    }
+    .about-card p {
+      font-size: 1rem;
+    }
+  }
+
+      /* ==== Global Card Styling ==== */
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .card-content ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .card-content li {
+      margin-bottom: 6px;
+    }
+
+    .company-logo {
+      max-width: 90px;
+      border-radius: 8px;
+    }
+
+    .company-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    @media (min-width: 600px) {
+      .company-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .card-action {
+      font-size: 0.9rem;
+      color: #616161;
+      text-align: right;
+    }
+
+    /* ==== Mobile Layout Fixes ==== */
+    @media (max-width: 600px) {
+      .row.valign-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .company-header {
+        align-items: center;
+      }
+
+      .company-header .card-title,
+      .company-header .role {
+        text-align: center;
+      }
+
+      .card-content ul {
+        text-align: left;
+      }
+
+      .company-logo {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* ==== Project Card Enhancements ==== */
+    .card.medium {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card.medium:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-image img {
+      border-bottom: 2px solid #009688;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
   /* Optional subtle fade-in animation */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -696,7 +870,7 @@ small {
       font-size: 1rem;
     }
   }
-  
+
 
 @media (max-width: 600px) {
   .company-header {
