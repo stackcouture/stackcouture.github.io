@@ -485,6 +485,11 @@ a.hoverline {
   -webkit-transition: 0.25s all;
 }
 
+a.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,150,136,0.4);
+}
+
 /* main a.hoverline */
 
 /* a.hoverline:hover {
