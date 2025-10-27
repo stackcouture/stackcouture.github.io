@@ -565,6 +565,18 @@ small {
 /* .teal {
   background-color: #00695c !important;
 } */
+.card-title {
+  font-size: 1.1rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.role {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  margin-top: 6px !important;
+  margin-bottom: 10px !important;
+}
 
 @media (min-width: 1200px) {
   #experience .container {
