@@ -754,6 +754,27 @@ small {
     text-transform: none;
   }
 
+  .page-title {
+    width: 100%;                        /* Full-width bar */
+    font-size: 1.8rem;                  /* Balanced, readable size */
+    font-weight: 700;                   /* Bold and strong */
+    text-align: left;                   /* Align to left (looks cleaner) */
+    color: #ffffff;                     /* White text */
+    background-color: #004d40;          /* Teal background */
+    padding: 12px 20px;                 /* Comfortable spacing */
+    margin-bottom: 25px;                /* Separation from content */
+    border-left: 6px solid #00bfa5;     /* Accent bar on left side */
+    border-radius: 4px;                 /* Slightly rounded edges */
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Optional hover effect for subtle interaction */
+  .page-title:hover {
+    background-color: #00695c;
+    transition: all 0.3s ease;
+  }
+  
   @media (max-width: 768px) {
     .about-card {
       padding: 25px;
