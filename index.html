@@ -225,11 +225,6 @@ I’m a lifelong learner who thrives on solving real-world challenges by combini
           </ul>
           
         </p>
-          
-        <!-- <p>
-          
-          Detail-oriented Senior Software Engineer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
         <p>
           Looking for an opportunity to work in a challenging position combining my skills in Software Engineering, which provides professional development, interesting experiences and personal growth.
         </p>
@@ -237,381 +232,331 @@ I’m a lifelong learner who thrives on solving real-world challenges by combini
       </div>
     </section>
 
+<!-- ================= Experience Section ================= -->
+<section id="experience" class="section scrollspy">
+  <h3 class="page-title white-text teal">Experience</h3>
 
-    <!-- Third Section: Experience -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-<!-- Experience Card: Prodapt Solutions -->
-<div class="card">
-  <div class="card-content">
-    <div class="row valign-wrapper">
-      <!-- Company Logo -->
-      <div class="col s12 m2 center-align">
-        <a href="https://www.prodapt.com/" target="_blank">
-          <img
-            src="/assets/img/prodapt-logo.jpg"
-            alt="Prodapt logo"
-            class="responsive-img company-logo"
-            style="max-width: 100px; border-radius: 8px;"
-          />
-        </a>
+  <style>
+    /* ==== Global Card Styling ==== */
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .card-content ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .card-content li {
+      margin-bottom: 6px;
+    }
+
+    .company-logo {
+      max-width: 90px;
+      border-radius: 8px;
+    }
+
+    .company-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    @media (min-width: 600px) {
+      .company-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .card-action {
+      font-size: 0.9rem;
+      color: #616161;
+      text-align: right;
+    }
+
+    /* ==== Mobile Layout Fixes ==== */
+    @media (max-width: 600px) {
+      .row.valign-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .company-header {
+        align-items: center;
+      }
+
+      .company-header .card-title,
+      .company-header .role {
+        text-align: center;
+      }
+
+      .card-content ul {
+        text-align: left;
+      }
+
+      .company-logo {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* ==== Project Card Enhancements ==== */
+    .card.medium {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card.medium:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-image img {
+      border-bottom: 2px solid #009688;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+  </style>
+
+  <div class="container">
+    <!-- === Experience 1: Prodapt === -->
+    <div class="card">
+      <div class="card-content">
+        <div class="row valign-wrapper" style="display: flex; flex-wrap: wrap; align-items: center;">
+          <div class="col s12 m2 center-align">
+            <a href="https://www.prodapt.com/" target="_blank">
+              <img src="/assets/img/prodapt-logo.jpg" alt="Prodapt logo" class="responsive-img company-logo" />
+            </a>
+          </div>
+
+          <div class="col s12 m10">
+            <div class="company-header">
+              <p class="card-title teal-text text-darken-4" style="margin: 0;">
+                <a href="https://www.prodapt.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                  Prodapt Solutions Private Limited
+                </a>
+              </p>
+              <span class="role brown-text text-darken-2">Senior Software Engineer</span>
+            </div>
+
+            <ul class="browser-default">
+              <li>Enhanced CI/CD pipeline efficiency by 20% by revamping Jenkins workflows and integrating Trivy and SonarQube.</li>
+              <li>Containerized applications using Docker for multiple environments, reducing operational errors by 30%.</li>
+              <li>Managed Kubernetes workloads on EKS with autoscaling, boosting availability by 20%.</li>
+              <li>Provisioned AWS infrastructure (EC2, S3, IAM, Route 53, ALB, ASG) with SSL/TLS for secure deployments.</li>
+              <li>Automated infrastructure provisioning with Terraform (VPCs, S3, EC2).</li>
+              <li>Monitored performance using CloudWatch and Grafana dashboards.</li>
+              <li>Maintained Nexus for artifact storage and dependency management.</li>
+              <li><b>Tools:</b> AWS, Jenkins, Docker, Kubernetes, Grafana, Terraform</li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="card-action">Oct 2021 – Nov 2024 | Bengaluru, India</div>
+    </div>
 
-      <!-- Company Info -->
-      <div class="col s12 m10">
-        <!-- Header: Company + Role in one line -->
-        
-       <div class="company-header"
-     style="
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       flex-wrap: nowrap;
-       margin-bottom: 8px;
-       width: 100%;
-     ">
+    <!-- === Experience 2: GreenLantern === -->
+    <div class="card">
+      <div class="card-content">
+        <div class="row valign-wrapper">
+          <div class="col s12 m2 center-align">
+            <a href="https://greenlanternit.com/" target="_blank">
+              <img src="/assets/img/green-latern.png" alt="GreenLantern logo" class="responsive-img company-logo" />
+            </a>
+          </div>
+          <div class="col s12 m10">
+            <div class="company-header">
+              <p class="card-title">
+                <a href="https://greenlanternit.com/" target="_blank" class="teal-text hoverline">GreenLantern IT Solutions Pvt Ltd</a>
+              </p>
+              <span class="role brown-text text-darken-2">Software Engineer</span>
+            </div>
+            <ul class="browser-default">
+              <li>Deployed and managed applications on EC2 and S3, ensuring high availability via ELB and Auto Scaling.</li>
+              <li>Implemented CloudWatch and SNS alerts to proactively monitor uptime.</li>
+              <li>Created Grafana dashboards for visibility and faster troubleshooting.</li>
+              <li><b>Tools:</b> AWS, Grafana</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">Apr 2020 – Aug 2021 | Hyderabad, India</div>
+    </div>
 
-  <!-- Company Name -->
-  <p class="card-title"
-     style="
-       margin: 0;
-       font-size: 1.05rem;
-       font-weight: 500;
-       color: #004d40;
-       flex-grow: 1;
-     ">
-    <a href="https://www.prodapt.com/" target="_blank"
-       class="teal-text hoverline"
-       style="text-decoration: none; color: inherit;">
-      Prodapt Solutions Private Limited
-    </a>
-  </p>
+    <!-- === Experience 3: Trianabot === -->
+    <div class="card">
+      <div class="card-content">
+        <div class="row valign-wrapper">
+          <div class="col s12 m2 center-align">
+            <img src="/assets/img/trianabot_technologies_logo.jpg" alt="Trianabot logo" class="responsive-img company-logo" />
+          </div>
+          <div class="col s12 m10">
+            <div class="company-header">
+              <p class="card-title teal-text hoverline">Trianabot Technologies Pvt Ltd</p>
+              <span class="role brown-text text-darken-2">Software Engineer</span>
+            </div>
+            <ul class="browser-default">
+              <li>Developed REST APIs with PHP/MySQL and deployed on EC2 for high availability.</li>
+              <li>Containerized APIs with Node.js & MongoDB for scalable cloud delivery.</li>
+              <li>Configured Apache Tomcat for Java web apps on EC2.</li>
+              <li><b>Tools:</b> AWS, PHP, NodeJS, MySQL, MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">Dec 2018 – Mar 2020 | Hyderabad, India</div>
+    </div>
 
-  <!-- Role -->
-  <span class="role brown-text text-darken-2"
-        style="
-          font-weight: 500;
-          font-size: 1.05rem;
-          margin-left: 16px;
-          flex-shrink: 0;
-          white-space: nowrap;
-        ">
-    Senior Software Engineer
-  </span>
-</div>
-
-        <!-- Description -->
-        <ul class="browser-default" style="margin-top: 10px;">
-          <li>Enhanced CI/CD pipeline efficiency by 20% by revamping Jenkins workflows, integrating security scans (Trivy) and code quality checks (SonarQube), and streamlining build, test and release processes across all stages</li>
-          <li>Containerized and maintained Docker-based applications for development, staging, and non-production, stabilizing environment reliability and reducing operational errors by 30%</li>
-          <li>Managed Kubernetes workloads on EKS with rolling updates, autoscaling and monitoring, boosting system availability by 20% and enhancing release stability</li>
-          <li>Provisioned AWS infrastructure including EC2, S3, IAM, Route 53, ALBs and Auto Scaling Groups incorporating health checks, failover routing, SSL/TLS configurations for secure and highly available deployments</li>
-          <li>Executed Terraform-based provisioning of VPCs, S3 buckets, and EC2 instances, delivering stable, reproducible infrastructure through infrastructure-as-code practices</li>
-          <li>Monitored CloudWatch and Grafana dashboards to isolate performance bottlenecks and sustain system reliability</li>
-          <li>Oversaw Nexus Repository for Artifact storage and dependency management, guaranteeing consistent Maven builds and artifact lifecycle control</li>
-          <li>Collaborated with developers and architects to refine CI/CD pipelines, standardize Terraform-based infrastructure and integrate monitoring and security tools checks, reducing release cycles by 20% and minimizing risks</li>
-          <li><b>Tools:</b> AWS, Jenkins, Docker, Kubernetes, Grafana, Terraform</li>
+    <!-- === Independent Projects === -->
+    <div class="card">
+      <div class="card-content">
+        <div class="company-header">
+          <p class="card-title"><strong>Independent Projects</strong></p>
+          <span class="role brown-text text-darken-2">DevOps Engineer</span>
+        </div>
+        <ul class="browser-default">
+          <li>Architected CI/CD pipelines using Jenkins, Helm, ArgoCD, and SBOM scanning, reducing deployment errors by 30%.</li>
+          <li>Configured Istio service mesh with mTLS, Prometheus, Grafana, and Jaeger for microservice observability.</li>
+          <li><b>Tools:</b> AWS, Docker, Kubernetes, ArgoCD, Helm</li>
         </ul>
       </div>
+      <div class="card-action">Dec 2024 – Present | Bengaluru, India</div>
     </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <div class="card-action right-align" style="font-size: 0.9rem; color: #616161;">
-    Oct 2021 – Nov 2024 | Bengaluru, India
-  </div>
-</div>
+<!-- ================= Projects Section ================= -->
+<section id="projects" class="section scrollspy">
+  <h3 class="page-title white-text teal">Projects</h3>
+  <div class="container">
+    <div class="row">
 
-
-
-  <!-- Experience 2 -->
-  <div class="card">
-    <div class="card-content">
-      <div class="row valign-wrapper">
-        <div class="col s12 m2 center-align">
-          <a href="https://greenlanternit.com/" target="_blank">
-            <img
-              src="/assets/img/green-latern.png"
-              alt="GreenLantern IT"
-              class="responsive-img company-logo"
-              style="max-width: 100px; border-radius: 8px;"
-            />
-          </a>
-        </div>
-
-        <div class="col s12 m10">
-          <p class="card-title" style="margin: 0; line-height: 1.4;">
-            <a href="https://greenlanternit.com/" target="_blank" class="teal-text hoverline">
-              <strong>GreenLantern IT Solutions Private Limited</strong>
-            </a>
-          </p>
-          <div class="role brown-text text-darken-2" style="font-weight: 600; margin-top: 6px; margin-bottom: 10px;">
-            Software Engineer
+      <!-- === Project 1 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="/assets/img/project1.jpg" alt="DevSecOps project" class="activator" />
           </div>
-
-          <ul class="browser-default">
-            <li>Released applications on EC2 and hosted static assets on S3, securing highly availability through load balancing and scaling strategies</li>
-            <li>Engineered ELB, Auto Scaling Groups, and CloudWatch monitoring, decreasing downtime by 30% and reinforcing overall system reliability.</li>
-            <li>Introduced Grafana dashboards and Route 53 DNS, refining observability and speeding up troubleshooting</li>
-            <li>Set up CloudWatch alarms and SNS notifications to proactively alert on performance and security issues, shortening incident response time</li>
-            <li><b>Tools:</b> AWS, Grafana</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="card-action right-align" style="font-size: 0.9rem; color: #616161;">
-      Apr 2020 – Aug 2021 | Hyderabad, India
-    </div>
-  </div>
-
-  <!-- Experience 3 -->
-  <div class="card">
-    <div class="card-content">
-      <div class="row valign-wrapper">
-        <div class="col s12 m2 center-align">
-          <img
-            src="/assets/img/trianabot_technologies_logo.jpg"
-            alt="Trianabot logo"
-            class="responsive-img company-logo"
-            style="max-width: 100px; border-radius: 8px;"
-          />
-        </div>
-
-        <div class="col s12 m10">
-          <p class="card-title" style="margin: 0; line-height: 1.4;">
-            <a href="#experience" class="teal-text hoverline">
-              <strong>Trianabot Technologies Private Limited</strong>
-            </a>
-          </p>
-          <div class="role brown-text text-darken-2" style="font-weight: 600; margin-top: 6px; margin-bottom: 10px;">
-            Software Engineer
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">
+              DevSecOps & GitOps Automation<i class="mdi-navigation-more-vert right"></i>
+            </span>
+            <p>CI/CD project on Java Spring Boot Application</p>
           </div>
-
-          <ul class="browser-default">
-            <li>Developed RESTful APIs using PHP and MySQL on AWS EC2, providing robust application delivery and high availability for clients</li>
-            <li>Built and containerized high-performance RESTful APIs with Node.js and MongoDB, deploying on AWS EC2 for dependable and scalable application delivery</li>
-            <li>Handled client applications on AWS EC2 with FTP deployments, ensured 99% uptime and optimized resource allocation per workload</li>
-            <li>Configured Apache Tomcat on AWS EC2 to host Java-based web applications (WAR/JAR files), verified end-to-end application performance</li>
-            <li><b>Tools:</b> Python, Flask, JavaScript</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="card-action right-align" style="font-size: 0.9rem; color: #616161;">
-      Dec 2018 – Mar 2020 | Hyderabad, India
-    </div>
-  </div>
-
-  <!-- Independent Projects -->
-  <div class="card">
-    <div class="card-content">
-      <div class="row valign-wrapper">
-        <div class="col s12 m2 center-align">
-          
-        </div>
-
-        <div class="col s12 m10">
-          <p class="card-title" style="margin: 0; line-height: 1.4;">
-            <strong>Independent Projects</strong>
-          </p>
-          <div class="role brown-text text-darken-2" style="font-weight: 600; margin-top: 6px; margin-bottom: 10px;">
-            DevOps Engineer
-          </div>
-
-          <ul class="browser-default">
-            <li>Architected CI/CD pipelines with Jenkins, Helm, ArgoCD, container signing, SBOM generation and AI-driven alerts, reducing deployment errors by 30% and expediting release cycles</li>
-            <li>Supervised istio service mesh with mTLS, traffic management, and fault injection using Prometheus, Grafana and Jaeger to ensure resilient and observable microservices</li>
-            <li><b>Tools:</b> Python, Scikit-learn, NLTK</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="card-action right-align" style="font-size: 0.9rem; color: #616161;">
-      Dec 2024 – Present | Bengaluru, India
-    </div>
-  </div>
-       
-
-      </div>
-    </section>
-
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
-        <div class="row">
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="/assets/img/project1.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">DevSecOps & GitOps Automation<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A CI/CD Project on Java Spring Boot Application
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> EKS, Terraform, AWS, ECR, Maven, Trivy, SonarQube, Snyk, Jenkins, ArgoCD, Github Actions </li>
-                  <li>Automated CI/CD using Terraform, Jenkins, EKS, ArgoCD, and Helm</li>
-                  <li>Enhanced security via SBOM, Trivy, Snyk, and Cosign integration</li>
-                  <li>Published Docker images to ECR and builds to Nexus</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://linkedin.com/feed/update/urn:li:activity:7368491129945718785/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-linkedin"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/stackcouture/devsecops-gitops-automation"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="devsecops app" src="/assets/img/project2.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">PHP Docker & AWS Secrets Manage<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A PHP project setup with Docker-Compose Containerization 
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> AWS, Docker, Secret Management</li>
-                  <li>Dockerized PHP apps with Docker Compose for consistent deployments</li>
-                  <li>Secured DB credentials using AWS Secrets Manager</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://linkedin.com/posts/naveen-ramlu_php-docker-compose-project-activity-7358379768808980480-v8Va/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-linkedin"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/stackcouture/php-project"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/project3.jpg"
-                style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Terraform Projects<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  AWS Cloud Infrastructure Projects (Terraform).
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> AWS, Terraform, Github Actions, OIDC</li>
-                  <li>Automated S3 static site provisioning using GitHub Actions with OIDC authentication</li>
-                  <li>Constructed reusable VPC modules with subnets, NAT gateways, route tables, and security groups</li>
-                  <li>Completed EBS volume resizing in Terraform</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/stackcouture/terraform-projects-portfolio"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/project4.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">AWS ECS DevOps Project<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Static WebSite Deploy on AWS ECS using Jenkins CI/CD pipeline
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Spearheaded end-to-end CI/CD pipelines leveraging GitHub, Docker, Trivy, Snyk, and AWS ECR, automating secure image building, vulnerability scanning and delivery for production-grade deployments</li>
-                  <li>Orchestrated ECS infrastructure through Terraform</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit website" href="https://linkedin.com/posts/naveen-ramlu_devops-aws-ecs-activity-7387096437035196416-CUgm/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-linkedin"></i></a>
-                  <a aria-label="Visit the GitHub repo for project"
-                    href="https://github.com/stackcouture/aws-ecs-proj" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Video Summarizer -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of app" src="/assets/img/project6.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Istio<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Istio Service Mesh on EKS
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Implemented Istio Service Mesh for secure and observable microservice communication</li>
-                  <li>Enabled mTLS authentication, traffic shifting, and tracing via Prometheus, Jaeger, and Kiali</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://linkedin.com/posts/naveen-ramlu_istio-kubernetes-servicemesh-activity-7371056631570194432-zg6b" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-linkedin"></i>
-                  </a>
-                </div>
-              </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <ul>
+              <li><b>Tools:</b> EKS, Terraform, AWS, Jenkins, ArgoCD</li>
+              <li>Automated builds & scans with Trivy, SonarQube, and Snyk.</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://linkedin.com/feed/update/urn:li:activity:7368491129945718785/" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/stackcouture/devsecops-gitops-automation" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- === Project 2 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/project2.png" alt="PHP project" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">PHP Docker & AWS Secrets Manage<i class="mdi-navigation-more-vert right"></i></span>
+            <p>PHP app containerized with Docker Compose.</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <ul>
+              <li>Secured DB credentials using AWS Secrets Manager.</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://github.com/stackcouture/php-project" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Project 3 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/project3.jpg" alt="Terraform Project" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">Terraform Projects<i class="mdi-navigation-more-vert right"></i></span>
+            <p>Reusable AWS Cloud Infrastructure Projects.</p>
+          </div>
+          <div class="card-reveal">
+            <ul>
+              <li>Automated S3 static hosting via GitHub Actions (OIDC).</li>
+              <li>Built reusable Terraform VPC modules.</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://github.com/stackcouture/terraform-projects-portfolio" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Project 4 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/project4.png" alt="ECS Project" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">AWS ECS DevOps Project<i class="mdi-navigation-more-vert right"></i></span>
+            <p>Static website deployment using Jenkins CI/CD pipeline.</p>
+          </div>
+          <div class="card-reveal">
+            <ul>
+              <li>Automated CI/CD pipelines with Jenkins, Docker, and Terraform.</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://github.com/stackcouture/aws-ecs-proj" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Project 5 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/project6.png" alt="Istio Project" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">Istio<i class="mdi-navigation-more-vert right"></i></span>
+            <p>Istio Service Mesh on AWS EKS.</p>
+          </div>
+          <div class="card-reveal">
+            <ul>
+              <li>Implemented mTLS and service tracing via Prometheus, Jaeger, and Kiali.</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://linkedin.com/posts/naveen-ramlu_istio-kubernetes-servicemesh-activity-7371056631570194432-zg6b" target="_blank" class="btn-floating blue-grey tooltipped"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <section id="skills" class="section scrollspy">
   <h3 class="page-title white-text teal">Skills Showcase</h3>
   <div class="container">
