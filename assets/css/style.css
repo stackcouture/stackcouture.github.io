@@ -578,6 +578,126 @@ small {
   margin-bottom: 10px !important;
 }
 
+ #about {
+    background: #f9fafb;
+    padding: 60px 0;
+    font-family: "Inter", "Poppins", sans-serif;
+    color: #333;
+  }
+
+  #about .page-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .about-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #009688;
+    font-weight: 600;
+  }
+
+  .skills-box {
+    background: #fff;
+    border-left: 4px solid #009688;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+  .skills-box h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #009688;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills-list li {
+    padding: 6px 0;
+    font-size: 0.98rem;
+  }
+
+  .skills-list li b {
+    color: #222;
+  }
+
+  .intro, .outro {
+    font-weight: 500;
+  }
+
+  .caption {
+    text-align: center;
+    color: #fff;
+    margin-top: 15vh;
+    font-family: "Poppins", "Inter", sans-serif;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .caption h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .name-accent {
+    color: #00bfa5;
+    font-weight: 700;
+  }
+
+  .role-line {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b2dfdb;
+    margin-bottom: 20px;
+  }
+
+  .typing {
+    color: #00bfa5;
+    font-weight: 600;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: #e0f2f1;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Optional subtle fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .caption h2 {
+      font-size: 2rem;
+    }
+    .role-line {
+      font-size: 1.2rem;
+    }
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+  
+
 @media (max-width: 600px) {
   .company-header {
     flex-wrap: wrap !important;
