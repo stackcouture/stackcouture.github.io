@@ -500,6 +500,27 @@ a.hoverline:hover {
   border-bottom: 3px solid #004d40 !important;
 }
 
+#skills .responsive-img {
+  max-width: 60px;      /* control the size of each icon */
+  height: auto;
+  margin-bottom: 6px;   /* small gap between image and text */
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effect */
+#skills .responsive-img:hover {
+  transform: scale(1.1); /* slight zoom on hover */
+}
+
+/* Center align skill labels and keep clean spacing */
+#skills .col {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
 #skills .card.large {
   height: 360px;
 }
