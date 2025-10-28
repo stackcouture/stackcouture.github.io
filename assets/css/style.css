@@ -557,11 +557,6 @@ a.hoverline:hover {
 }
 
 /* Skill list styling */
-#about .skills-list {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
 
 #about .skills-list li {
   font-size: 1.05rem;       /* increased font size */
@@ -702,12 +697,6 @@ small {
     margin-bottom: 15px;
     font-weight: 600;
     color: #009688;
-  }
-
-  .skills-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 
   .skills-list li {
