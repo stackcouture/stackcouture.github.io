@@ -666,12 +666,12 @@ small {
     color: #333;
   }
 
-  #about .page-title {
+  /* #about .page-title {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
     font-weight: 700;
-  }
+  } */
 
   .about-content p {
     font-size: 1.05rem;
