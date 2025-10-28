@@ -813,11 +813,11 @@ small {
     line-height: 1.7;
   }
 
-  #about {
+  /* #about {
     background: #f8f9fa;
     padding: 60px 0;
     font-family: "Poppins", "Inter", sans-serif;
-  }
+  } */
 
   .about-card {
     background: #fff;
