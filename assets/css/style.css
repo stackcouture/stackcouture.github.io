@@ -1,53 +1,178 @@
-/* ============================================
-   GLOBAL PORTFOLIO STYLES – CLEAN & PROFESSIONAL
-   ============================================ */
+.profile-pic {
+  position: relative;
+  max-width:130px;
+  max-height:130px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  /* display: inline-block; */
+  
+  
+  /* background-size: cover;  */
+  margin: -31px; 
+  margin-left:-7px;
+  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border-radius: 50% !important;
+}
 
-/* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Inter:400,500,600&display=swap");
+.profile-pic img {
+  width: 100%;
+  height: auto;
+}
 
-/* Base Styles */
+.tracker {
+  /* visibility: hidden; */
+  position: fixed;
+  /* margin-inline-end: auto;  */
+  bottom: 0; 
+  right: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+.social {
+  margin: 0 auto;
+  width: auto;
+  text-align: inherit;
+  /* padding: 10px; */
+}
+
+.icon-btn {
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 70px;
+  border-radius: 45px;
+  display: inline-block;
+  margin: 4px;
+}
+
+.github {
+  color: black;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.angellist {
+  color: grey;
+}
+
+.icon-btn:hover {
+  transform: scale(1.10);
+  color: #FFFFFF;
+}
+
+.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.angellist:hover {
+  background-color: grey;
+}
+
+.github:hover {
+  background-color: black;
+}
+
+/* Buttons - Read Me, Contact Us */
+
+.readme {
+  position: relative;
+  padding: 11px 35px;
+  background: #fff;
+  color: #00796b;
+  border: 2px solid #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* .readme:hover{
+  color: white;
+  background-color: #00796b;
+} */
+
+.contactme {
+  position: relative;
+  padding: 11px 35px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.contactme:hover{
+  color: #00796b;
+  background-color: white;
+}
+/* main body */
+
+/* body-color */
+
 body {
   color: #333;
-  font-family: "Poppins", "Inter", sans-serif;
   font-size: 18px;
-  background: #f8f9fa;
-  scroll-behavior: smooth;
 }
 
-/* ============================================
-   GLOBAL HEADINGS & SECTIONS
-   ============================================ */
+/* body {
+  color: black;
+  font-size: 18px;
+} */
 
-section.section {
-  padding: 70px 0;
-  background: #fdfdfd;
+/* main a -- links */
+
+/* a {
+  color: #009688;
+} */
+
+a {
+  color: #004d40;
 }
 
-.page-title {
-  width: 100%;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-  color: #fff;
-  background-color: #004d40;
-  padding: 12px 20px;
-  margin-bottom: 35px;
-  border-left: 6px solid #00bfa5;
-  border-radius: 4px;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  animation: fadeIn 0.6s ease;
+/* main blockqoute */
+
+/* blockquote {
+  border-left: 5px solid #795548;
+  color: #795548;
+  font-size: 125%;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-left: 1.5rem;
+} */
+
+blockquote {
+  border-left: 5px solid #795548;
+  color: #795548;
+  font-size: 125%;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-left: 1.5rem;
 }
 
-.page-title:hover {
-  background-color: #00695c;
-  transition: all 0.3s ease;
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
 }
 
-/* ============================================
-   NAVIGATION & SIDEBAR
-   ============================================ */
+.text-center {
+  text-align: center;
+}
+
+/* main nav */
 
 nav {
   background: white;
@@ -55,9 +180,81 @@ nav {
   height: 0;
 }
 
+/* nav {
+  background: rgb(149, 126, 212);
+  box-shadow: none;
+  height: 0;
+} */
+
+nav i {
+  padding: 0 15px;
+  position: relative;
+  top: 5px;
+}
+
+/* main */
+
+/* main {
+  background: url(../../assets/img/bg.png) repeat;
+  padding-left: 190px;
+} */
+
+main {
+  background: url(../../assets/img/bg.png) repeat;
+  padding-left: 190px;
+}
+
+dl {
+  margin-top: 0.5rem;
+}
+
+dd {
+  display: inline-block;
+  font-weight: 500;
+  margin-left: 0;
+}
+
+dt {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
 ul.side-nav {
   width: 190px;
 }
+
+ul.side-nav li {
+  padding: 0;
+}
+
+/* ul.side-nav.fixed a {
+  box-sizing: content-box;
+  color: rgb(48, 122, 207);
+  display: block;
+  line-height: 100%;
+  padding: 10px 0 12px;
+} */
+
+ul.side-nav.fixed a {
+  box-sizing: content-box;
+  color: rgb(16, 202, 56);
+  display: block;
+  line-height: 100%;
+  padding: 10px 0 12px;
+}
+
+ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+  border: none;
+  font-weight: 200;
+}
+
+/* ul.side-nav.fixed li.logo {
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+  box-sizing: content-box;
+  min-height: 90px;
+  padding: 30px 30px 40px;
+} */
 
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
@@ -67,345 +264,842 @@ ul.side-nav.fixed li.logo {
   padding: 30px 30px 40px;
 }
 
-ul.side-nav.fixed a {
-  color: rgb(16, 202, 56);
-  display: block;
+ul.side-nav.fixed li.logo a {
+  font-weight: 200;
   line-height: 100%;
-  padding: 10px 0 12px;
 }
 
-/* ============================================
-   INTRO SECTION
-   ============================================ */
+ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
+  background-color: #fafafa;
+  border-left: 3px solid;
+}
+
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
+  color: #333 !important;
+}
+
+li.logo span {
+  display: block;
+  font-size: 14px;
+}
+
+.brand-logo h1 {
+  font-size: inherit;
+  line-height: inherit;
+  margin: inherit;
+  font-weight: inherit;
+}
+
+.container {
+  width: 95%;
+}
+
+h3 {
+  font-weight: 200;
+  margin-bottom: 60px;
+  margin-top: 0;
+  padding: 30px 40px;
+  text-transform: uppercase;
+}
+
+.section {
+  padding-bottom: 30px;
+  padding-top: 0;
+  position: relative;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/* Original */
+
+/* #intro.section {
+  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
+  position: relative;
+} */
 
 #intro.section {
   background: #a7ffeb repeat;
   position: relative;
 }
 
-.caption {
-  text-align: center;
-  color: #fff;
-  margin-top: 15vh;
-  padding: 0 20px;
-  animation: fadeIn 1.5s ease;
+#intro.section .container {
+  color: white;
+  font-weight: 200;
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
-.caption h2 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+/* #intro.section .container *:not(span) {
+  font-weight: 300;
+  line-height: 150%;
+  padding: 0 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+} */
+
+#intro.section .container *:not(span) {
+  font-weight: 300;
+  /* font-weight: 400; */
+  line-height: 150%;
+  /* padding: 0 0px; */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.name-accent {
-  color: #00bfa5;
-  font-weight: 700;
+#intro.section .underline {
+  border-bottom: 5px solid #24305e;
 }
 
-.role-line {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #b2dfdb;
-  margin-bottom: 20px;
+#intro.section .teal {
+  padding: 0 10px;
 }
 
-.tagline {
-  font-size: 1.1rem;
-  color: #e0f2f1;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-/* ============================================
-   PROFILE IMAGE & SOCIAL
-   ============================================ */
-
-.profile-pic {
-  position: relative;
-  max-width: 130px;
-  max-height: 130px;
-  overflow: hidden;
-  margin: -31px -7px;
-  border: 6px solid rgba(0, 77, 64, 0.4);
-  border-radius: 50%;
-}
-
-.profile-pic img {
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: auto;
 }
 
-.social {
-  text-align: inherit;
+.waves-effect.waves-blue .waves-ripple {
+  /* The alpha value allows the text and background color
+   of the button to still show through. */
+  background-color: rgba(33, 150, 243, 0.2);
 }
-
-.icon-btn {
-  width: 50px;
-  height: 50px;
-  border: 0;
-  font-size: 30px;
-  border-radius: 45px;
-  display: inline-block;
-  margin: 4px;
-  transition: transform 0.3s ease;
-}
-
-.icon-btn:hover {
-  transform: scale(1.1);
-  color: #fff;
-}
-
-.github {
-  color: black;
-}
-.github:hover {
-  background: black;
-}
-
-.linkedin {
-  color: #0077b5;
-}
-.linkedin:hover {
-  background: #0077b5;
-}
-
-.angellist {
-  color: grey;
-}
-.angellist:hover {
-  background: grey;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-.btn,
-.readme,
-.contactme {
-  border-radius: 30px;
-  font-weight: 600;
-  padding: 10px 25px;
-  text-transform: none;
-  transition: all 0.3s ease;
-}
-
-.btn {
-  background: linear-gradient(90deg, #009688, #00796b);
-  color: #fff !important;
-  box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 150, 136, 0.4);
-}
-
-.readme {
-  background: #fff;
-  color: #00796b;
-  border: 2px solid #fff;
-}
-
-.contactme {
-  background: none;
-  color: #fff;
-  border: 2px solid #fff;
-}
-
-.contactme:hover {
-  color: #00796b;
-  background: white;
-}
-
-/* ============================================
-   CARD STYLING
-   ============================================ */
 
 .card {
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
+  margin-bottom: 60px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+.card .role {
+  font-size: 1.25rem;
+  position: absolute;
+  right: 38px;
+  top: 35px;
 }
 
-.card-content {
-  padding: 24px !important;
+.card li a {
+  margin-right: 0;
   color: #333;
-  line-height: 1.7;
+  border-bottom: 2px solid #ffab40;
 }
 
-.card-content ul {
-  padding-left: 20px;
-  line-height: 1.6;
+.card li a:hover {
+  color: #333;
+  font-weight: 500;
+}
+
+.card .card-content {
+  padding-bottom: 30px;
+}
+
+.card .card-content p {
+  padding: 5px 0 0;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  margin-bottom: -0.5rem;
+  margin-top: 2rem;
+}
+
+.card h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#experience .card-action {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: none;
+}
+
+#experience .card .col.s12.m2 a {
+  display: block;
+}
+
+#experience .card .col.s12.m2 a img {
+  max-height: 60px;
 }
 
 .card-action {
-  background: #f5f5f5;
-  border-top: 1px solid #ddd;
-  padding: 10px 16px !important;
-  text-align: left;
-  font-size: 0.9rem;
-  color: #616161;
+  padding: 8px 16px !important;       /* smaller padding */
+  text-align: left !important;        /* align text to the left */
+  font-size: 0.9rem !important;       /* smaller text */
+  background: #f5f5f5;                /* subtle gray background (optional) */
+  border-top: 1px solid #ddd;         /* thin divider line */
 }
 
 .card-action a {
-  color: #00796b !important;
-  margin-right: 12px;
+  color: #00796b !important;          /* teal color for links */
+  margin-right: 12px;                 /* space between links */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .card-action a:hover {
-  color: #004d40 !important;
+  color: #004d40 !important;          /* darker teal on hover */
 }
 
-/* ============================================
-   COMPANY LOGOS & EXPERIENCE
-   ============================================ */
-
-.company-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+.card-action span {
+  font-size: 85%;
+  color: #666;
 }
 
-.company-logo {
-  max-width: 90px;
-  border-radius: 8px;
+.card ul {
+  margin-bottom: 0;
 }
 
-@media (min-width: 600px) {
-  .company-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.card ul li {
+  line-height: 200%;
+  list-style-type: disc;
+  margin-left: 24px;
 }
 
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
-
-#about {
-  background: #f9fafb;
-  padding: 60px 0;
+.card ul li li {
+  color: #666;
+  font-size: 13px;
 }
 
-.about-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card .card-title {
+  font-size: 24px;
 }
 
-.about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+.card .card-content .card-title {
+  line-height: 2.5rem;
 }
 
-.about-card p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+.card i.right {
+  margin-left: 10px;
 }
 
-.highlight {
-  color: #009688;
-  font-weight: 600;
+a.hoverline {
+  border-bottom: 3px solid transparent !important;
+  padding: 3px 3px 0 3px;
+  transition: 0.25s all;
+  -moz-transition: 0.25s all;
+  -webkit-transition: 0.25s all;
 }
 
-.skills-box {
+a.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,150,136,0.4);
+}
+
+/* main a.hoverline */
+
+/* a.hoverline:hover {
+  border-bottom: 3px solid #24305e !important;
+} */
+
+a.hoverline:hover {
+  border-bottom: 3px solid #004d40 !important;
+}
+
+#skills .responsive-img {
+  max-width: 60px;      /* control the size of each icon */
+  height: auto;
+  margin-bottom: 6px;   /* small gap between image and text */
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effect */
+#skills .responsive-img:hover {
+  transform: scale(1.1); /* slight zoom on hover */
+}
+
+/* Center align skill labels and keep clean spacing */
+#skills .col {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+#skills .card.large {
+  height: 360px;
+}
+
+#skills h4 {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+#skills .col img.responsive-img {
+  margin: 0 auto;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* Style for About section */
+#about .skills-box {
   margin-top: 25px;
-  padding: 20px 25px;
-  background: #f9fafa;
-  border-left: 4px solid #009688;
-  border-radius: 8px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.skills-box h5 {
-  margin-bottom: 10px;
+/* Section title inside Technical Skills */
+#about .skills-box h5 {
+  color: #004d40;
   font-weight: 600;
-  color: #009688;
+  margin-bottom: 15px;
 }
 
-.skills-list {
-  list-style: none;
-  padding: 0;
+/* Skill list styling */
+
+#about .skills-list li {
+  font-size: 1.05rem;       /* increased font size */
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  background: #ffffff;
+  padding: 8px 14px;
+  border-left: 4px solid #009688;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Subtle hover effect */
+#about .skills-list li:hover {
+  background: #e0f2f1;
+  transform: translateX(5px);
+}
+
+.card.large .card-content p {
+  color: inherit;
   margin: 0;
+  padding: 30px 0;
 }
 
-.skills-list li {
-  padding: 6px 0;
-  font-size: 0.96rem;
+#experience .card-content .row {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
 
-/* ============================================
-   UTILITIES & RESPONSIVENESS
-   ============================================ */
+.card.large .card-image {
+  height: 230px;
+}
 
-.text-center {
+.card.large .card-content {
+  height: auto;
+}
+
+.card.medium .card-image {
+  height: 240px;
+}
+
+.card-action a.btn-floating {
+  margin-bottom: 0;
+}
+
+#contact a:not(.btn-floating) {
+  bottom: 6px;
+  left: 20px;
+  position: relative;
+}
+
+#experience .col.s12.m2 {
   text-align: center;
 }
 
-.teal {
-  background-color: #008073 !important;
+.fa-external-link:before {
+  left: 3px;
+  position: relative;
+  top: 2px;
 }
+
+small {
+  display: none;
+}
+
+.grey-text {
+  color: #666 !important;
+}
+
+/* main .teal-text */
 
 .teal-text {
   color: #008073 !important;
 }
 
-/* Fade animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+/* .teal-text {
+  color: #0b5e86 !important;
+} */
+
+/* .teal */
+
+.teal {
+  background-color: #008073 !important;
+}
+
+/* .teal {
+  background-color: #00695c !important;
+} */
+.card-title {
+  font-size: 1.1rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.role {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  margin-top: 6px !important;
+  margin-bottom: 10px !important;
+}
+
+ #about {
+    background: #f9fafb;
+    padding: 60px 0;
+    font-family: "Inter", "Poppins", sans-serif;
+    color: #333;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  #about .page-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .about-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #009688;
+    font-weight: 600;
+  }
+
+  .skills-box {
+    background: #fff;
+    border-left: 4px solid #009688;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+  .skills-box h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #009688;
+  }
+
+  .skills-list li {
+    padding: 6px 0;
+    font-size: 0.98rem;
+  }
+
+  .skills-list li b {
+    color: #222;
+  }
+
+  .intro, .outro {
+    font-weight: 500;
+  }
+
+  .caption {
+    text-align: center;
+    color: #fff;
+    margin-top: 15vh;
+    font-family: "Poppins", "Inter", sans-serif;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .caption h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .name-accent {
+    color: #00bfa5;
+    font-weight: 700;
+  }
+
+  .role-line {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b2dfdb;
+    margin-bottom: 20px;
+  }
+
+  .typing {
+    color: #00bfa5;
+    font-weight: 600;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: #e0f2f1;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  #about {
+    background: #f8f9fa;
+    padding: 60px 0;
+    font-family: "Poppins", "Inter", sans-serif;
+  }
+
+  .about-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  }
+
+  .about-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #009688;
+    font-weight: 600;
+  }
+
+  .skills-box {
+    margin-top: 25px;
+    padding: 20px 25px;
+    background: #f9fafa;
+    border-left: 4px solid #009688;
+    border-radius: 8px;
+  }
+
+  .skills-box h5 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #009688;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills-list li {
+    padding: 6px 0;
+    font-size: 0.96rem;
+  }
+
+  .opportunity-box {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .opportunity-box p {
+    font-size: 1.05rem;
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px 25px;
+    text-transform: none;
+  }
+
+  .page-title {
+    width: 100%;                        /* Full-width bar */
+    font-size: 1.8rem;                  /* Balanced, readable size */
+    font-weight: 700;                   /* Bold and strong */
+    text-align: left;                   /* Align to left (looks cleaner) */
+    color: #ffffff;                     /* White text */
+    background-color: #004d40;          /* Teal background */
+    padding: 12px 20px;                 /* Comfortable spacing */
+    margin-bottom: 25px;                /* Separation from content */
+    border-left: 6px solid #00bfa5;     /* Accent bar on left side */
+    border-radius: 4px;                 /* Slightly rounded edges */
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Optional hover effect for subtle interaction */
+  .page-title:hover {
+    background-color: #00695c;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .about-card {
+      padding: 25px;
+    }
+    .about-card p {
+      font-size: 1rem;
+    }
+  }
+
+      /* ==== Global Card Styling ==== */
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .card-content ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .card-content li {
+      margin-bottom: 6px;
+    }
+
+    .company-logo {
+      max-width: 90px;
+      border-radius: 8px;
+    }
+
+    .company-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    @media (min-width: 600px) {
+      .company-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .card-action {
+      font-size: 0.9rem;
+      color: #616161;
+      text-align: right;
+    }
+
+    /* ==== Mobile Layout Fixes ==== */
+    @media (max-width: 600px) {
+      .row.valign-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .company-header {
+        align-items: center;
+      }
+
+      .company-header .card-title,
+      .company-header .role {
+        text-align: center;
+      }
+
+      .card-content ul {
+        text-align: left;
+      }
+
+      .company-logo {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* ==== Project Card Enhancements ==== */
+    .card.medium {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card.medium:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-image img {
+      border-bottom: 2px solid #009688;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+  /* Optional subtle fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .caption h2 {
+      font-size: 2rem;
+    }
+    .role-line {
+      font-size: 1.2rem;
+    }
+    .tagline {
+      font-size: 1rem;
+    }
+  }
+
+
+@media (max-width: 600px) {
+  .company-header {
+    flex-wrap: wrap !important;
+  }
+  .company-header .role {
+    margin-top: 4px;
   }
 }
 
-/* ============================================
-   RESPONSIVE FIXES
-   ============================================ */
+@media (min-width: 1200px) {
+  #experience .container {
+    width: 860px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .card ul li {
+    font-size: 14px;
+    line-height: 200%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .card ul li {
+    line-height: 150%;
+  }
+}
 
 @media (max-width: 992px) {
   main {
-    padding-left: 0;
+    padding-left: 0px;
     padding-top: 64px;
+  }
+  ul.side-nav a {
+    line-height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  nav {
+    background: #fff;
+    height: 64px;
+    position: absolute;
+  }
+  nav a.button-collapse, nav a.button-collapse i {
+    color: #009688;
+    height: 56px;
+    line-height: 56px;
+  }
+  h3 {
+    padding: 20px 30px;
+    margin-bottom: 40px;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  nav.hide-on-large.only.trigger {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .name-title {
+    display: block;
+    height: 100%;
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  .name-title>span, .name-title>a {
+    position: relative;
+    line-height: 20px;
+  }
+  .name-title a {
+    font-size: 22px;
+    display: block;
+  }
+  .name-title span {
+    display: block;
+    font-size: 14px;
+  }
+  h3, .container {
+    position: relative;
+    top: 64px;
+  }
+  section#intro {
+    margin-bottom: -64px;
+  }
+  .card .role {
+    position: relative;
+    right: initial;
+    top: initial;
   }
 }
 
 @media (max-width: 600px) {
-  .caption h2 {
-    font-size: 2rem;
+  h2 {
+    font-size: 22px;
+    line-height: 200%;
+    margin: 30px 0 0;
   }
-  .role-line {
-    font-size: 1.2rem;
-  }
-  .tagline {
-    font-size: 1rem;
-  }
-  .company-header {
-    flex-wrap: wrap !important;
-    align-items: center;
-  }
-  .company-logo {
-    margin-bottom: 10px;
+  #intro.section .container *:not(span) {
+    padding: 0;
   }
   .card .card-content .card-title {
     font-size: 20px;
+    line-height: 24px;
+  }
+  #experience span.card-title {
+    text-align: center;
+    display: block;
+  }
+  #experience span.card-title a {
+    margin: 0;
+  }
+  i.mdi-navigation-close.right {
+    position: relative;
+    bottom: 15px;
+  }
+  #contact a:not(.btn-floating) {
+    text-align: center;
+    display: block;
+    left: initial;
+    bottom: initial;
+  }
+  #contact a.btn-floating.btn-large {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #intro.section {
+    background-position-x: 30%;
   }
 }
