@@ -1093,7 +1093,7 @@ small {
   }
   h3, .container {
     position: relative;
-    top: 64px;
+    top: 20px;
   }
   section#intro {
     margin-bottom: -64px;
