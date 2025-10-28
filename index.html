@@ -303,34 +303,82 @@ driving reliable multi-environment deployments
   <h3 class="page-title white-text teal">Experience</h3>
 
   <div class="container">
+    <!-- Common Style for Company Logos -->
+    <style>
+      .company-logo {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .card {
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-content {
+        padding: 25px 30px;
+      }
+
+      .company-header .card-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .role {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #5d4037;
+      }
+
+      .card-action {
+        background-color: #f9f9f9;
+        color: #555;
+        font-size: 0.9rem;
+        text-align: left;
+        padding: 12px 20px;
+        border-top: 1px solid #eee;
+      }
+
+      ul.browser-default li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    </style>
+
     <!-- === Experience 1: Prodapt === -->
     <div class="card">
       <div class="card-content">
-        <div class="row valign-wrapper" style="display: flex; flex-wrap: wrap; align-items: center;">
+        <div class="row valign-wrapper" style="display: flex; align-items: center; flex-wrap: wrap;">
           <div class="col s12 m2 center-align">
             <a href="https://www.prodapt.com/" target="_blank">
               <img src="/assets/img/prodapt-logo.jpg" alt="Prodapt logo" class="responsive-img company-logo" />
             </a>
           </div>
-
           <div class="col s12 m10">
             <div class="company-header">
-              <p class="card-title teal-text text-darken-4" style="margin: 0;">
-                <a href="https://www.prodapt.com/" target="_blank" style="text-decoration: none; color: inherit;">
+              <p class="card-title">
+                <a href="https://www.prodapt.com/" target="_blank" style="text-decoration: none; color: #004d40;">
                   Prodapt Solutions Private Limited
                 </a>
               </p>
-              <span class="role brown-text text-darken-2">Senior Software Engineer</span>
+              <span class="role">Senior Software Engineer</span>
             </div>
-
             <ul class="browser-default">
-              <li>Enhanced CI/CD pipeline efficiency by 20% by revamping Jenkins workflows and integrating Trivy and SonarQube.</li>
-              <li>Containerized applications using Docker for multiple environments, reducing operational errors by 30%.</li>
-              <li>Managed Kubernetes workloads on EKS with autoscaling, boosting availability by 20%.</li>
-              <li>Provisioned AWS infrastructure (EC2, S3, IAM, Route 53, ALB, ASG) with SSL/TLS for secure deployments.</li>
-              <li>Automated infrastructure provisioning with Terraform (VPCs, S3, EC2).</li>
-              <li>Monitored performance using CloudWatch and Grafana dashboards.</li>
-              <li>Maintained Nexus for artifact storage and dependency management.</li>
+              <li>Enhanced CI/CD pipeline efficiency by 20% by optimizing Jenkins workflows and integrating Trivy and SonarQube.</li>
+              <li>Containerized applications using Docker, improving deployment consistency and reliability.</li>
+              <li>Managed Kubernetes workloads (EKS) with autoscaling and monitoring for high availability.</li>
+              <li>Provisioned secure AWS infrastructure (EC2, S3, Route 53, ALB, ASG) with SSL/TLS.</li>
+              <li>Automated infrastructure provisioning using Terraform modules.</li>
               <li><b>Tools:</b> AWS, Jenkins, Docker, Kubernetes, Grafana, Terraform</li>
             </ul>
           </div>
@@ -342,7 +390,7 @@ driving reliable multi-environment deployments
     <!-- === Experience 2: GreenLantern === -->
     <div class="card">
       <div class="card-content">
-        <div class="row valign-wrapper">
+        <div class="row valign-wrapper" style="display: flex; align-items: center;">
           <div class="col s12 m2 center-align">
             <a href="https://greenlanternit.com/" target="_blank">
               <img src="/assets/img/green-latern.png" alt="GreenLantern logo" class="responsive-img company-logo" />
@@ -351,14 +399,16 @@ driving reliable multi-environment deployments
           <div class="col s12 m10">
             <div class="company-header">
               <p class="card-title">
-                <a href="https://greenlanternit.com/" target="_blank" class="teal-text hoverline">GreenLantern IT Solutions Pvt Ltd</a>
+                <a href="https://greenlanternit.com/" target="_blank" style="text-decoration: none; color: #004d40;">
+                  GreenLantern IT Solutions Pvt Ltd
+                </a>
               </p>
-              <span class="role brown-text text-darken-2">Software Engineer</span>
+              <span class="role">Software Engineer</span>
             </div>
             <ul class="browser-default">
-              <li>Deployed and managed applications on EC2 and S3, ensuring high availability via ELB and Auto Scaling.</li>
-              <li>Implemented CloudWatch and SNS alerts to proactively monitor uptime.</li>
-              <li>Created Grafana dashboards for visibility and faster troubleshooting.</li>
+              <li>Deployed and managed applications on EC2 and S3 with ELB and Auto Scaling for resilience.</li>
+              <li>Implemented CloudWatch and SNS alerts to ensure proactive system monitoring.</li>
+              <li>Built Grafana dashboards for enhanced observability and faster issue resolution.</li>
               <li><b>Tools:</b> AWS, Grafana</li>
             </ul>
           </div>
@@ -370,19 +420,19 @@ driving reliable multi-environment deployments
     <!-- === Experience 3: Trianabot === -->
     <div class="card">
       <div class="card-content">
-        <div class="row valign-wrapper">
+        <div class="row valign-wrapper" style="display: flex; align-items: center;">
           <div class="col s12 m2 center-align">
             <img src="/assets/img/trianabot_technologies_logo.jpg" alt="Trianabot logo" class="responsive-img company-logo" />
           </div>
           <div class="col s12 m10">
             <div class="company-header">
-              <p class="card-title teal-text hoverline">Trianabot Technologies Pvt Ltd</p>
-              <span class="role brown-text text-darken-2">Software Engineer</span>
+              <p class="card-title" style="color: #004d40;">Trianabot Technologies Pvt Ltd</p>
+              <span class="role">Software Engineer</span>
             </div>
             <ul class="browser-default">
-              <li>Developed REST APIs with PHP/MySQL and deployed on EC2 for high availability.</li>
-              <li>Containerized APIs with Node.js & MongoDB for scalable cloud delivery.</li>
-              <li>Configured Apache Tomcat for Java web apps on EC2.</li>
+              <li>Developed REST APIs using PHP/MySQL and deployed on AWS EC2 for scalable hosting.</li>
+              <li>Containerized Node.js and MongoDB apps for efficient microservice delivery.</li>
+              <li>Configured Apache Tomcat for Java-based web applications on EC2.</li>
               <li><b>Tools:</b> AWS, PHP, NodeJS, MySQL, MongoDB</li>
             </ul>
           </div>
@@ -395,12 +445,12 @@ driving reliable multi-environment deployments
     <div class="card">
       <div class="card-content">
         <div class="company-header">
-          <p class="card-title"><strong>Independent Projects</strong></p>
-          <span class="role brown-text text-darken-2">DevOps Engineer</span>
+          <p class="card-title" style="color: #004d40;">Independent Projects</p>
+          <span class="role">DevOps Engineer</span>
         </div>
         <ul class="browser-default">
           <li>Architected CI/CD pipelines using Jenkins, Helm, ArgoCD, and SBOM scanning, reducing deployment errors by 30%.</li>
-          <li>Configured Istio service mesh with mTLS, Prometheus, Grafana, and Jaeger for microservice observability.</li>
+          <li>Configured Istio service mesh with mTLS, Prometheus, Grafana, and Jaeger for secure observability.</li>
           <li><b>Tools:</b> AWS, Docker, Kubernetes, ArgoCD, Helm</li>
         </ul>
       </div>
