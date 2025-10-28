@@ -834,7 +834,7 @@ small {
   font-weight: 700;
   text-align: left;
   color: #ffffff;
-  background-color: #004d40;
+  background-color: #00695c;
   padding: 12px 20px;
   margin-bottom: 25px;
   border-left: 6px solid #00bfa5;
@@ -847,10 +847,10 @@ small {
 }
 
 /* Subtle hover effect for interaction */
-.page-title:hover {
+/* .page-title:hover {
   background-color: #00695c;
   transition: all 0.3s ease;
-}
+} */
 
   @media (max-width: 768px) {
     .about-card {
