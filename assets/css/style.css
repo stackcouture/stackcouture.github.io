@@ -540,6 +540,64 @@ a.hoverline:hover {
   display: table-cell;
 }
 
+/* === Skill Section Category Title === */
+.skill-category-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #004d40; /* Deep teal tone for DevOps feel */
+  margin-bottom: 20px;
+  border-left: 4px solid #00bfa5; /* Accent line */
+  padding-left: 12px;
+  letter-spacing: 0.3px;
+  text-transform: none; /* Normal case (not uppercase) */
+  font-family: "Poppins", "Inter", sans-serif;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-category-title:hover {
+  color: #00796b;
+  border-color: #26a69a;
+}
+
+/* === Card Styling === */
+#skills .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: none;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* === Skill Icons Layout === */
+#skills .card-content img {
+  max-height: 60px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#skills .card-content img:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+/* === Skill Labels === */
+#skills .col {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #37474f;
+  text-align: center;
+}
+
+#skills .col:hover {
+  color: #00796b;
+}
+
+
 /* Style for About section */
 #about .skills-box {
   margin-top: 25px;
