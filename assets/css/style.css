@@ -1105,6 +1105,12 @@ small {
   }
 }
 
+@media (max-width: 768px) {
+  .buttons {
+    margin-bottom: 20px !important;
+  }
+}
+
 @media (max-width: 600px) {
   h2 {
     font-size: 22px;
