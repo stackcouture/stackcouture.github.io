@@ -314,17 +314,6 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
-/* #intro.section {
-  background: #a7ffeb repeat;
-  position: relative;
-} */
 
 #intro.section .container {
   color: white;
@@ -334,18 +323,9 @@ h3 {
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 500;
-  /* font-weight: 400; */
   line-height: 150%;
-  /* padding: 0 0px; */
 }
 
 #intro.section .underline {
