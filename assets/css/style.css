@@ -540,6 +540,47 @@ a.hoverline:hover {
   display: table-cell;
 }
 
+/* Style for About section */
+#about .skills-box {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Section title inside Technical Skills */
+#about .skills-box h5 {
+  color: #004d40;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Skill list styling */
+#about .skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#about .skills-list li {
+  font-size: 1.05rem;       /* increased font size */
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  background: #ffffff;
+  padding: 8px 14px;
+  border-left: 4px solid #009688;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Subtle hover effect */
+#about .skills-list li:hover {
+  background: #e0f2f1;
+  transform: translateX(5px);
+}
+
 .card.large .card-content p {
   color: inherit;
   margin: 0;
