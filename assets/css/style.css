@@ -830,15 +830,15 @@ small {
   }
 
 .page-title {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   text-align: left;
   color: #ffffff;
-  background-color: #00695c;
-  padding: 10px 15px;
-  margin-bottom: 15px;
+  background-color: #008073;
+  padding: 12px 20px;
+  margin-bottom: 25px;
   border-left: 6px solid #00bfa5;
-  border-radius: 2px;
+  border-radius: 4px;
   letter-spacing: 0.5px;
   text-transform: none; /* keeps normal case, e.g., "Skills Showcase" */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
