@@ -1,178 +1,357 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kubernetes Reference</title>
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PP9HNZQH');</script>
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style1.css" />
+  <title>StackCouture | DevOps Portfolio</title>
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Naveen R | Senior Software Engineer" />
+  <meta property="og:description" content="Senior Software Engineer" />
+  <meta property="og:url" content="https://stackcouture.github.io/" />
+  <meta property="og:site_name" content="Naveen R | Senior Software Engineer" />
+  <meta property="article:publisher" content="https://stackcouture.github.io/" />>
+  <meta name="author" content="Naveen R" />
+  <meta name="description" content="StackCouture - Naveen R's DevOps Engineer portfolio showcasing AWS, Kubernetes, CI/CD and cloud automation projects.">
+  <meta name="keywords" content="StackCouture, DevOps, AWS, Kubernetes, portfolio, Naveen R">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="aIgjfbmm1qMCE_YQ9eMpC0ms-yLSd11YEHBcqQANt9Q" />
   <style>
-    /* Sidebar styling */
-    .sidebar {
-      height: 100vh;
-      position: fixed;
-      width: 250px;
-      background-color: #263238; /* dark sidebar */
-      color: white;
-      padding-top: 20px;
-    }
-
-    .sidebar a {
-      color: white;
-      display: block;
-      padding: 10px 20px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .sidebar a:hover {
-      background-color: #37474f;
-      border-radius: 4px;
-    }
-
-    main {
-      margin-left: 250px;
-      padding: 20px;
-    }
-
-    /* Mobile adjustments */
-    @media only screen and (max-width: 992px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-      }
-
-      main {
-        margin-left: 0;
-      }
-    }
-
-    .page-title {
-      margin-bottom: 10px;
-    }
-
-    .back-btn, .btn-download {
-      margin: 5px 5px 15px 0;
-    }
-
-    pre {
-      background-color: #eceff1;
-      padding: 10px;
-      overflow-x: auto;
-    }
+    .side-nav .logo {
+  padding: 20px 0;
+  background: #004d40; /* or teal darken-4 */
+}
+.side-nav .logo img {
+  border: 2px solid white;
+}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PG8N77CWV9');
+  </script>
 </head>
+
 <body>
+  <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9HNZQH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <!-- Navigation Menu-->
+  <!-- Nav class 1 -->
+  <nav class="hide-on-small-only">
+    <ul class="side-nav fixed section table-of-contents">
 
-  <!-- Sidebar -->
-  <ul class="sidebar">
-    <li><a href="#!" class="brand-logo center">Logo</a></li>
-    <li><a href="#intro">Intro</a></li>
-    <li><a href="#content">Content</a></li>
-    <li><a href="#dashboard">Dashboard</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#reports">Reports</a></li>
-    <li><a href="#settings">Settings</a></li>
-    <li><a href="#logout">Logout</a></li>
-  </ul>
+      <li class="logo">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+          class="brand-logo grey-blue-text">
+          <img src="/assets/img/passport-new.jpeg" class="circle img-responsive profile-pic" alt="avatar">
+        </a>
+      </li>
 
-  <!-- Main content -->
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+      
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Open Naveen's resume in a new tab" href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
+        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nav class 2 -->
+  <nav class="hide-on-large only trigger z-depth-1">
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Naveen
+        R</a><span class="black-text">Senior Software Engineer</span>
+    </div>
+  </nav>
+
+  <!-- Nav class 3 -->
+  <nav class="hide-on-large only">
+    <ul id="slide-out" class="side-nav">
+    <li class="logo center-align" style="margin-top: 20px;">
+      <a href="#intro" aria-label="Navigate to the beginning of the page">
+        <img src="/assets/img/passport-new.jpeg"
+             alt="Naveen Profile Picture"
+             class="circle responsive-img"
+             style="max-width: 100px; border-radius: 50%;">
+      </a>
+    </li>
+
+    <li class="divider"></li>
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Open Naveen's Resume in a new tab"
+          href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
+          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content-->
   <main>
-    <!-- Intro Section -->
-    <section id="intro" class="section scrollspy">
-      <div class="container center-align">
-        <h4 class="page-title">Kubernetes Reference PDF</h4>
-        <p>
-          This reference document provides a comprehensive guide to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
-        </p>
-        <a href="/index.html" class="back-btn">← Back to Home</a>
-        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download btn waves-effect waves-light">Download PDF</a>
-      </div>
-    </section>
+    <!-- Second Section: About -->
+            <section id="about" class="section scrollspy">
+            <h4 class="page-title">Kubernetes Guide</h4>
+            <div class="container">
+                <div class="card">
+                <div class="card-content">
+                    <div class="row valign-wrapper" style="padding: 20px;display: flex;flex-wrap: wrap;align-items: center;">
+                    
+                    <p class="intro">
+                    I’m a <span class="highlight">DevOps Engineer</span> passionate about building 
+                    <span class="highlight">scalable, secure, and automated cloud systems</span>. 
+                    With hands-on experience across <b>AWS</b>, <b>Kubernetes</b>, <b>Docker</b>, and <b>Terraform</b>, 
+                    I focus on delivering infrastructure that empowers rapid and reliable deployments.
+                    </p>
 
-    <!-- Content Section -->
-    <section id="content" class="section scrollspy">
-      <div class="container">
-        <div class="card">
-          <div class="card-content">
-            <h5>1. Core Concepts</h5>
-            <ul>
-              <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
-              <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
-              <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
-              <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
-              <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
+                    <p>
+                    My work blends <b>automation</b>, <b>security</b>, and <b>efficiency</b> — from designing CI/CD pipelines and managing 
+                    containerized applications to implementing <b>GitOps</b> and <b>DevSecOps</b> practices. 
+                    I enjoy turning complex infrastructure challenges into simple, elegant, and resilient solutions.
+                    </p>
+
+                    <p>
+                    I’m a <b>lifelong learner</b> driven by curiosity and innovation, exploring <b>multi-cloud environments</b> 
+                    and <b>AI-driven automation</b> to make systems faster, safer, and smarter.
+                    </p>
+
+                    <div class="skills-box">
+                    <h5 style="font-weight: 600; color: #004d40; margin-bottom: 15px;">
+                        <i class="material-icons teal-text tiny" style="vertical-align: middle;"></i>
+                        Technical Skills
+                    </h5>
+            <ul class="skills-list" 
+                style="list-style: none !important; padding-left: 0 !important; margin: 0; font-size: 1.05rem; line-height: 1.8; color: #333;">
+            <li style="list-style: none !important;"> <b>Cloud & Infrastructure:</b> AWS, Azure, GCP</li>
+            <li style="list-style: none !important;"> <b>IaC & Automation:</b> Terraform, Jenkins, GitHub Actions, GitLab CI, ArgoCD, Helm, Ansible</li>
+            <li style="list-style: none !important;"> <b>Containers:</b> Docker, Kubernetes (EKS), ECS, Istio, Cosign</li>
+            <li style="list-style: none !important;"> <b>DevSecOps:</b> Trivy, SonarQube, Snyk, SBOM Automation</li>
+            <li style="list-style: none !important;"> <b>Monitoring:</b> Prometheus, Grafana, ELK/EFK, Loki, Jaeger</li>
+            <li style="list-style: none !important;"> <b>Build & Versioning:</b> Git, Maven, Nexus, ECR</li>
+            <li style="list-style: none !important;"> <b>Scripting:</b> Shell, YAML, Python, NodeJS, Groovy</li>
+            <li style="list-style: none !important;"> <b>Databases:</b> MySQL, MongoDB</li>
+            <li style="list-style: none !important;"> <b>Collaboration:</b> JIRA, Confluence, Slack</li>
+            <li style="list-style: none !important;"> <b>OS:</b> Linux (Ubuntu, RHEL, Amazon Linux), Windows</li>
             </ul>
 
-            <h5>2. Sample YAML Deployment</h5>
-            <pre>
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: my-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: my-app
-  template:
-    metadata:
-      labels:
-        app: my-app
-    spec:
-      containers:
-      - name: my-app-container
-        image: my-app-image:latest
-        ports:
-        - containerPort: 8080
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
-            </pre>
+                    </div>
 
-            <h5>3. ConfigMaps & Secrets</h5>
-            <ul>
-              <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
-              <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
+
+                    <div class="card-action">
+                    <p style="font-size: 18px; 
+                font-weight: bold;">
+                    <b>Currently open to new opportunities</b> — seeking a challenging <b>DevOps role</b> focused on automation, scalability, and cloud security.
+                    </p>
+
+                    </div>
+
+                    </div>
+
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+
+<!-- Eight Section: Contact -->
+<section id="contact" class="section scrollspy">
+  <h4 class="page-title">Contact</h4>
+  <div class="container">
+    <div class="row">
+      <!-- Contact Card (aligned like Education but wider) -->
+      <div class="col s12 m8 l8"> <!-- widened from m6 l6 to m8 l8 -->
+        <div class="card" 
+             style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%;">
+          <div class="card-content" style="text-align: left; padding: 35px 40px;">
+            
+            <p style="margin-bottom: 25px; font-size: 1.1rem; color: #444;">
+              Let’s connect — feel free to reach out via phone, email, or social platforms.
+            </p>
+
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.05rem; line-height: 2;">
+
+              <!-- Phone -->
+              <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                <a href="tel:+919700779728" 
+                   class="btn-floating waves-effect waves-light teal lighten-1"
+                   style="width: 40px; height: 40px; line-height: 40px;">
+                  <i class="fa fa-phone"></i>
+                </a>
+                <a href="tel:+919700779728" 
+                   style="margin-left: 15px; color: #00695c; font-weight: 500; text-decoration: none;">
+                  +91 970 077 9728
+                </a>
+              </li>
+
+              <!-- Email -->
+              <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                <a href="mailto:naveenramlu28@gmail.com" 
+                   class="btn-floating waves-effect waves-light teal lighten-1"
+                   style="width: 40px; height: 40px; line-height: 40px;">
+                  <i class="fa fa-envelope"></i>
+                </a>
+                <a href="mailto:naveenramlu28@gmail.com" 
+                   style="margin-left: 15px; color: #00695c; font-weight: 500; text-decoration: none; text-transform: none;">
+                  naveenramlu28@gmail.com
+                </a>
+              </li>
+
+              <!-- GitHub -->
+              <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                <a href="https://github.com/stackcouture/" target="_blank" 
+                   class="btn-floating waves-effect waves-light teal lighten-1"
+                   style="width: 40px; height: 40px; line-height: 40px;">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://github.com/stackcouture/" target="_blank" 
+                   style="margin-left: 15px; color: #00695c; font-weight: 500; text-decoration: none; text-transform: none;">
+                  github.com/stackcouture
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li style="display: flex; align-items: center;">
+                <a href="https://www.linkedin.com/in/naveen-ramlu/" target="_blank" 
+                   class="btn-floating waves-effect waves-light teal lighten-1"
+                   style="width: 40px; height: 40px; line-height: 40px;">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/naveen-ramlu/" target="_blank" 
+                   style="margin-left: 15px; color: #00695c; font-weight: 500; text-decoration: none; text-transform: none;">
+                  linkedin.com/in/naveen-ramlu
+                </a>
+              </li>
+
             </ul>
 
-            <h5>4. Services & Networking</h5>
-            <ul>
-              <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
-              <li><code>NodePort</code>: Exposes service on each node's port.</li>
-              <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
-            </ul>
-
-            <h5>5. Helm Charts</h5>
-            <ul>
-              <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
-              <li>Define <code>values.yaml</code> for configurable templates.</li>
-            </ul>
-
-            <h5>6. CI/CD Integration</h5>
-            <ul>
-              <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
-              <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
-              <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
-            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
+
   </main>
 
-  <!-- Materialize JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    // Initialize scrollspy
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.scrollspy');
-      M.ScrollSpy.init(elems, {scrollOffset: 50});
+  <!-- typed.js -->
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script type="text/javascript">
+    var typed = new Typed('.typing',{
+      strings: ['DevOps Engineer', 'Cloud Enthusiast', 'Automation Architect'],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
     });
   </script>
+
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Materialize - Compiled and minified JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    // Materialize - Initializers
+    $(document).ready(function () {
+      $(".scrollspy").scrollSpy()
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+        menuWidth: 190, // Default is 240
+        edge: "left", // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      })
+    })
+  </script>
 </body>
+
 </html>
