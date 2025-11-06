@@ -182,61 +182,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="card">
                 <div class="card-content">
-                    <div class="row valign-wrapper" style="padding: 20px;display: flex;flex-wrap: wrap;align-items: center;">
-                    
-                    <p class="intro">
-                    I’m a <span class="highlight">DevOps Engineer</span> passionate about building 
-                    <span class="highlight">scalable, secure, and automated cloud systems</span>. 
-                    With hands-on experience across <b>AWS</b>, <b>Kubernetes</b>, <b>Docker</b>, and <b>Terraform</b>, 
-                    I focus on delivering infrastructure that empowers rapid and reliable deployments.
-                    </p>
+                    <h5>1. Core Concepts</h5>
+                    <ul>
+                    <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
+                    <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
+                    <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
+                    <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
+                    <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
+                    </ul>
 
-                    <p>
-                    My work blends <b>automation</b>, <b>security</b>, and <b>efficiency</b> — from designing CI/CD pipelines and managing 
-                    containerized applications to implementing <b>GitOps</b> and <b>DevSecOps</b> practices. 
-                    I enjoy turning complex infrastructure challenges into simple, elegant, and resilient solutions.
-                    </p>
+                    <h5>2. Sample YAML Deployment</h5>
+                            <pre>
+                apiVersion: apps/v1
+                kind: Deployment
+                metadata:
+                name: my-app
+                spec:
+                replicas: 3
+                selector:
+                    matchLabels:
+                    app: my-app
+                template:
+                    metadata:
+                    labels:
+                        app: my-app
+                    spec:
+                    containers:
+                    - name: my-app-container
+                        image: my-app-image:latest
+                        ports:
+                        - containerPort: 8080
+                        readinessProbe:
+                        httpGet:
+                            path: /healthz
+                            port: 8080
+                        initialDelaySeconds: 5
+                        periodSeconds: 10
+                            </pre>
 
-                    <p>
-                    I’m a <b>lifelong learner</b> driven by curiosity and innovation, exploring <b>multi-cloud environments</b> 
-                    and <b>AI-driven automation</b> to make systems faster, safer, and smarter.
-                    </p>
+                    <h5>3. ConfigMaps & Secrets</h5>
+                    <ul>
+                    <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
+                    <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
+                    </ul>
 
-                    <div class="skills-box">
-                    <h5 style="font-weight: 600; color: #004d40; margin-bottom: 15px;">
-                        <i class="material-icons teal-text tiny" style="vertical-align: middle;"></i>
-                        Technical Skills
-                    </h5>
-            <ul class="skills-list" 
-                style="list-style: none !important; padding-left: 0 !important; margin: 0; font-size: 1.05rem; line-height: 1.8; color: #333;">
-            <li style="list-style: none !important;"> <b>Cloud & Infrastructure:</b> AWS, Azure, GCP</li>
-            <li style="list-style: none !important;"> <b>IaC & Automation:</b> Terraform, Jenkins, GitHub Actions, GitLab CI, ArgoCD, Helm, Ansible</li>
-            <li style="list-style: none !important;"> <b>Containers:</b> Docker, Kubernetes (EKS), ECS, Istio, Cosign</li>
-            <li style="list-style: none !important;"> <b>DevSecOps:</b> Trivy, SonarQube, Snyk, SBOM Automation</li>
-            <li style="list-style: none !important;"> <b>Monitoring:</b> Prometheus, Grafana, ELK/EFK, Loki, Jaeger</li>
-            <li style="list-style: none !important;"> <b>Build & Versioning:</b> Git, Maven, Nexus, ECR</li>
-            <li style="list-style: none !important;"> <b>Scripting:</b> Shell, YAML, Python, NodeJS, Groovy</li>
-            <li style="list-style: none !important;"> <b>Databases:</b> MySQL, MongoDB</li>
-            <li style="list-style: none !important;"> <b>Collaboration:</b> JIRA, Confluence, Slack</li>
-            <li style="list-style: none !important;"> <b>OS:</b> Linux (Ubuntu, RHEL, Amazon Linux), Windows</li>
-            </ul>
+                    <h5>4. Services & Networking</h5>
+                    <ul>
+                    <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
+                    <li><code>NodePort</code>: Exposes service on each node's port.</li>
+                    <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
+                    </ul>
 
-                    </div>
+                    <h5>5. Helm Charts</h5>
+                    <ul>
+                    <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
+                    <li>Define <code>values.yaml</code> for configurable templates.</li>
+                    </ul>
 
-
-                    <div class="card-action">
-                    <p style="font-size: 18px; 
-                font-weight: bold;">
-                    <b>Currently open to new opportunities</b> — seeking a challenging <b>DevOps role</b> focused on automation, scalability, and cloud security.
-                    </p>
-
-                    </div>
-
-                    </div>
-
-                    </div>
+                    <h5>6. CI/CD Integration</h5>
+                    <ul>
+                    <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
+                    <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
+                    <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
+                    </ul>
                 </div>
                 </div>
+            </div>
             </section>
 
 
