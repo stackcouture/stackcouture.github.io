@@ -175,6 +175,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   font-weight: 500;
 }
 
+.horizontal-card {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.horizontal-content {
+  display: flex;
+  flex-wrap: nowrap; /* prevents wrapping on large screens */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.logo-container {
+  flex: 0 0 120px; /* fixed logo width */
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.experience-details {
+  flex: 1; /* fills remaining width */
+}
+
 @media (max-width: 768px) {
   .horizontal-content {
     flex-direction: column;
