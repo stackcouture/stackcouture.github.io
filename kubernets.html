@@ -1,172 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <title>StackCouture | DevOps Portfolio</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Reference</title>
   <!-- Materialize CSS -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="/assets/css/style1.css" />
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <style>
-    /* General Body Styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f7f7f7;
-      scroll-behavior: smooth;
+    /* Sidebar styling */
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      width: 250px;
+      background-color: #263238; /* dark sidebar */
+      color: white;
+      padding-top: 20px;
     }
 
-    /* Intro Section */
-    #intro {
-      padding: 100px 20px 80px 20px; /* Top padding ensures it's below navbar */
-      background-color: #e0f2f1;
-      position: relative;
-      z-index: 1;
-    }
-
-    h4.page-title {
-      font-weight: 700;
-      color: #004d40;
-      margin-bottom: 20px;
-    }
-
-    #intro p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto 20px auto;
-      line-height: 1.5;
-    }
-
-    .btn-download,
-    .back-btn {
-      margin: 10px 5px;
-      display: inline-block;
+    .sidebar a {
+      color: white;
+      display: block;
       padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
-      color: #fff;
+      transition: background 0.3s;
     }
 
-    .btn-download {
-      background: #009688;
+    .sidebar a:hover {
+      background-color: #37474f;
+      border-radius: 4px;
     }
 
-    .btn-download:hover {
-      background: #00796b;
+    main {
+      margin-left: 250px;
+      padding: 20px;
     }
 
-    .back-btn {
-      background: #00796b;
+    /* Mobile adjustments */
+    @media only screen and (max-width: 992px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+      }
     }
 
-    .back-btn:hover {
-      background: #004d40;
-    }
-
-    /* Content Section */
-    #content {
-      padding: 80px 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      margin-bottom: 30px;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    }
-
-    .card-content pre {
-      background: #263238;
-      color: #eceff1;
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.95rem;
-    }
-
-    .card-content h5 {
-      color: #00796b;
-      font-weight: 600;
-      margin-top: 20px;
-    }
-
-    code {
-      background: #eceff1;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-size: 0.9rem;
-    }
-
-    ul li {
+    .page-title {
       margin-bottom: 10px;
     }
 
-    /* Sticky Navbar */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      background: #004d40;
+    .back-btn, .btn-download {
+      margin: 5px 5px 15px 0;
     }
 
-    nav ul.side-nav.fixed {
-      width: 220px;
-    }
-
-    nav ul.side-nav.fixed li.logo {
-      padding: 20px 0;
-      background: #004d40;
-    }
-
-    nav ul.side-nav.fixed li.logo img {
-      border: 2px solid white;
-      max-width: 80px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    /* ScrollSpy Active */
-    .table-of-contents .active a {
-      color: #009688 !important;
-      font-weight: 600;
+    pre {
+      background-color: #eceff1;
+      padding: 10px;
+      overflow-x: auto;
     }
   </style>
 </head>
-
 <body>
-  <!-- Navigation Menu-->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-      <li class="logo">
-        <a id="logo-container" href="#intro">
-          <img src="/assets/img/passport-new.jpeg" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
-      <li class="bold"><a href="#intro" class="waves-effect waves-dark teal-text">Intro</a></li>
-      <li class="bold"><a href="#content" class="waves-effect waves-dark teal-text">Content</a></li>
-    </ul>
-  </nav>
 
+  <!-- Sidebar -->
+  <ul class="sidebar">
+    <li><a href="#!" class="brand-logo center">Logo</a></li>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#reports">Reports</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#logout">Logout</a></li>
+  </ul>
+
+  <!-- Main content -->
   <main>
     <!-- Intro Section -->
     <section id="intro" class="section scrollspy">
@@ -176,7 +87,7 @@
           This reference document provides a comprehensive guide to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
         </p>
         <a href="/index.html" class="back-btn">← Back to Home</a>
-        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download">Download PDF</a>
+        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download btn waves-effect waves-light">Download PDF</a>
       </div>
     </section>
 
@@ -254,23 +165,14 @@ spec:
     </section>
   </main>
 
-  <!-- jQuery and Materialize JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-    $(document).ready(function () {
-      // Initialize scrollspy
-      $(".scrollspy").scrollSpy({ scrollOffset: 80 });
-
-      // Initialize side nav for mobile
-      $(".button-collapse").sideNav({
-        menuWidth: 220,
-        edge: "left",
-        closeOnClick: true
-      });
+    // Initialize scrollspy
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.scrollspy');
+      M.ScrollSpy.init(elems, {scrollOffset: 50});
     });
   </script>
 </body>
-
 </html>
