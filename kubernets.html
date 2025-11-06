@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>StackCouture | Kubernetes Reference</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/assets/css/style1.css" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f7f7f7;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    h4.page-title {
+      font-weight: 700;
+      color: #004d40;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-content pre {
+      background: #263238;
+      color: #eceff1;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+
+    .card-content h5 {
+      color: #00796b;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .btn-download {
+      background: #009688;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-download:hover {
+      background: #00796b;
+    }
+
+    code {
+      background: #eceff1;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      background: #00796b;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #004d40;
+    }
+
+    /* Mobile menu adjustments */
+    .side-nav li a {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="teal">
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo">StackCouture</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/kubernetes.html">Kubernetes PDF</a></li>
+        <li><a href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Side Menu -->
+  <ul class="side-nav" id="mobile-demo">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/kubernetes.html">Kubernetes PDF</a></li>
+    <li><a href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank">Resume</a></li>
+  </ul>
+
+  <main>
+    <section id="intro" class="section scrollspy">
+      <div class="container center-align">
+        <h4 class="page-title">Kubernetes Reference PDF</h4>
+        <p style="font-size: 1.1rem; max-width: 800px; margin: auto;">
+          This reference document provides a comprehensive guide to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
+        </p>
+
+        <!-- Back to Home Button -->
+        <a href="/index.html" class="back-btn">← Back to Home</a>
+
+        <!-- Download PDF Button -->
+        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download">
+          Download PDF
+        </a>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <h5>1. Core Concepts</h5>
+            <ul>
+              <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
+              <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
+              <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
+              <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
+              <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
+            </ul>
+
+            <h5>2. Sample YAML Deployment</h5>
+            <pre>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:latest
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+            </pre>
+
+            <h5>3. ConfigMaps & Secrets</h5>
+            <ul>
+              <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
+              <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
+            </ul>
+
+            <h5>4. Services & Networking</h5>
+            <ul>
+              <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
+              <li><code>NodePort</code>: Exposes service on each node's port.</li>
+              <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
+            </ul>
+
+            <h5>5. Helm Charts</h5>
+            <ul>
+              <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
+              <li>Define <code>values.yaml</code> for configurable templates.</li>
+            </ul>
+
+            <h5>6. CI/CD Integration</h5>
+            <ul>
+              <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
+              <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
+              <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="section teal darken-3 white-text center-align" style="padding: 30px 20px;">
+      <p>© 2025 Naveen R | Senior Software Engineer | <a href="https://stackcouture.online/" target="_blank" style="color: #fff;">stackcouture.online</a></p>
+    </section>
+  </main>
+
+  <!-- Materialize JS -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize ScrollSpy
+      var elems = document.querySelectorAll('.scrollspy');
+      M.ScrollSpy.init(elems, {});
+
+      // Initialize mobile menu
+      var mobileElems = document.querySelectorAll('.button-collapse');
+      M.Sidenav.init(mobileElems, {});
+    });
+  </script>
+</body>
+</html>
