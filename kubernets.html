@@ -53,6 +53,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border: 2px solid white;
 }
 
+.kubernetes-content {
+  font-size: 1.15rem;
+  color: #004d40;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  border-left: 3px solid #009688;
+  padding-left: 10px;
+  letter-spacing: 0.3px;
+}
+
+.card-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card-content pre {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222;
+  border-left: 3px solid #009688;
+}
+
 
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
@@ -178,7 +207,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Main Content-->
   <main>
-    <!-- Second Section: About -->
 <!-- Second Section: About -->
 <section id="about" class="section scrollspy">
     <h4 class="page-title">Kubernetes Guide & Reference</h4>
@@ -210,20 +238,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="container" style="margin-top: 2rem;">
-    <div class="card">
-      <div class="card-content">
-        <h5>1. Core Concepts</h5>
-        <ul>
-          <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
-          <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
-          <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
-          <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
-          <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
-        </ul>
+<div class="container" style="margin-top: 2rem;">
+  <div class="card">
+    <div class="card-content">
+      
+      <h5 class="kubernetes-content card-action-text">1. Core Concepts</h5>
+      <ul>
+        <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
+        <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
+        <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
+        <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
+        <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
+      </ul>
 
-        <h5>2. Sample YAML Deployment</h5>
-        <pre>
+      <h5 class="kubernetes-content card-action-text">2. Sample YAML Deployment</h5>
+      <pre>
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -249,36 +278,38 @@ spec:
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 10
-        </pre>
+      </pre>
 
-        <h5>3. ConfigMaps & Secrets</h5>
-        <ul>
-          <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
-          <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
-        </ul>
+      <h5 class="kubernetes-content card-action-text">3. ConfigMaps & Secrets</h5>
+      <ul>
+        <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
+        <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
+      </ul>
 
-        <h5>4. Services & Networking</h5>
-        <ul>
-          <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
-          <li><code>NodePort</code>: Exposes service on each node's port.</li>
-          <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
-        </ul>
+      <h5 class="kubernetes-content card-action-text">4. Services & Networking</h5>
+      <ul>
+        <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
+        <li><code>NodePort</code>: Exposes service on each node's port.</li>
+        <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
+      </ul>
 
-        <h5>5. Helm Charts</h5>
-        <ul>
-          <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
-          <li>Define <code>values.yaml</code> for configurable templates.</li>
-        </ul>
+      <h5 class="kubernetes-content card-action-text">5. Helm Charts</h5>
+      <ul>
+        <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
+        <li>Define <code>values.yaml</code> for configurable templates.</li>
+      </ul>
 
-        <h5>6. CI/CD Integration</h5>
-        <ul>
-          <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
-          <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
-          <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
-        </ul>
-      </div>
+      <h5 class="kubernetes-content card-action-text">6. CI/CD Integration</h5>
+      <ul>
+        <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
+        <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
+        <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
+      </ul>
+      
     </div>
   </div>
+</div>
+
 </section>
 
 <!-- Eight Section: Contact -->
