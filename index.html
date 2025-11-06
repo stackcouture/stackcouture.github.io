@@ -52,6 +52,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .side-nav .logo img {
   border: 2px solid white;
 }
+      .company-logo {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .card {
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-content {
+        padding: 25px 30px;
+      }
+
+      .company-header .card-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .role {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #5d4037;
+      }
+
+      .card-action {
+        background-color: #f9f9f9;
+        color: #555;
+        font-size: 0.9rem;
+        text-align: left;
+        padding: 12px 20px;
+        border-top: 1px solid #eee;
+      }
+
+      ul.browser-default li {
+        margin-bottom: 7px;
+    font-size: 1.15rem;
+    line-height: 1.2;
+      }
+
+  .card-footer {
+    background: none;
+    padding: 0px 24px 25px;
+    text-align: left;
+  }
+
+  .card-action-text {
+    font-size: 1.15rem;
+    color: #004d40;
+    font-weight: 600;
+    margin: 0;
+    border-left: 3px solid #009688;
+    padding-left: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .card-action-text span {
+    color: #5d4037;
+    font-weight: 500;
+  }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
   <script>
@@ -288,83 +357,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h4 class="page-title">Experience</h4>
 
   <div class="container">
-    <!-- Common Style for Company Logos -->
-    <style>
-      .company-logo {
-        width: 90px;
-        height: 90px;
-        object-fit: contain;
-        border-radius: 8px;
-        margin-bottom: 10px;
-      }
-
-      .card {
-        border-radius: 12px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-      }
-
-      .card:hover {
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-      }
-
-      .card-content {
-        padding: 25px 30px;
-      }
-
-      .company-header .card-title {
-        font-size: 1.15rem;
-        font-weight: 600;
-        margin-bottom: 4px;
-      }
-
-      .role {
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: #5d4037;
-      }
-
-      .card-action {
-        background-color: #f9f9f9;
-        color: #555;
-        font-size: 0.9rem;
-        text-align: left;
-        padding: 12px 20px;
-        border-top: 1px solid #eee;
-      }
-
-      ul.browser-default li {
-        margin-bottom: 7px;
-    font-size: 1.15rem;
-    line-height: 1.2;
-      }
-
-  .card-footer {
-    background: none;
-    padding: 0px 24px 25px;
-    text-align: left;
-  }
-
-  .card-action-text {
-    font-size: 1.15rem;
-    color: #004d40;
-    font-weight: 600;
-    margin: 0;
-    border-left: 3px solid #009688;
-    padding-left: 10px;
-    letter-spacing: 0.3px;
-  }
-
-  .card-action-text span {
-    color: #5d4037;
-    font-weight: 500;
-  }
-    </style>
 
     <!-- === Experience 1: Prodapt === -->
     <div class="card">
       <div class="card-content">
-        <div class="row valign-wrapper">
+        <div class="row valign-wrapper" style="display: flex; align-items: center; flex-wrap: wrap;">
           <div class="col s12 m2 center-align">
             <a href="https://www.prodapt.com/" target="_blank">
               <img src="/assets/img/prodapt-logo.jpg" alt="Prodapt logo" class="responsive-img company-logo" />
