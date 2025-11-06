@@ -8,9 +8,9 @@
   <title>StackCouture | Kubernetes Reference</title>
 
   <!-- Materialize CSS -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Custom Styles -->
   <link rel="stylesheet" href="/assets/css/style1.css" />
 
@@ -104,11 +104,6 @@
     .back-btn:hover {
       background: #004d40;
     }
-
-    /* Mobile menu adjustments */
-    .side-nav li a {
-      font-size: 1rem;
-    }
   </style>
 </head>
 
@@ -118,7 +113,7 @@
   <nav class="teal">
     <div class="nav-wrapper container">
       <a href="/index.html" class="brand-logo">StackCouture</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/kubernetes.html">Kubernetes PDF</a></li>
@@ -128,13 +123,14 @@
   </nav>
 
   <!-- Mobile Side Menu -->
-  <ul class="side-nav" id="mobile-demo">
+  <ul class="sidenav" id="mobile-demo">
     <li><a href="/index.html">Home</a></li>
     <li><a href="/kubernetes.html">Kubernetes PDF</a></li>
     <li><a href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank">Resume</a></li>
   </ul>
 
   <main>
+    <!-- Intro Section -->
     <section id="intro" class="section scrollspy">
       <div class="container center-align">
         <h4 class="page-title">Kubernetes Reference PDF</h4>
@@ -142,17 +138,14 @@
           This reference document provides a comprehensive guide to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
         </p>
 
-        <!-- Back to Home Button -->
+        <!-- Buttons -->
         <a href="/index.html" class="back-btn">← Back to Home</a>
-
-        <!-- Download PDF Button -->
-        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download">
-          Download PDF
-        </a>
+        <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download">Download PDF</a>
       </div>
     </section>
 
-    <section id="content" class="section">
+    <!-- Content Section -->
+    <section id="content" class="section scrollspy">
       <div class="container">
         <div class="card">
           <div class="card-content">
@@ -231,16 +224,16 @@ spec:
   </main>
 
   <!-- Materialize JS -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize ScrollSpy
-      var elems = document.querySelectorAll('.scrollspy');
-      M.ScrollSpy.init(elems, {});
+      // Initialize Sidenav for mobile menu
+      const sidenavs = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sidenavs);
 
-      // Initialize mobile menu
-      var mobileElems = document.querySelectorAll('.button-collapse');
-      M.Sidenav.init(mobileElems, {});
+      // Initialize ScrollSpy
+      const scrollSpys = document.querySelectorAll('.scrollspy');
+      M.ScrollSpy.init(scrollSpys, { scrollOffset: 50 });
     });
   </script>
 </body>
