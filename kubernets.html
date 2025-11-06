@@ -52,6 +52,97 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .side-nav .logo img {
   border: 2px solid white;
 }
+
+/* Container */
+  .about-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  /* Card */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* About text */
+  .about-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  /* Button group */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0.65rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Back button */
+  .back-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  .back-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Download button */
+  .download-btn {
+    background-color: #008073;
+    color: #fff;
+    border: 1px solid #007060;
+  }
+  .download-btn:hover {
+    background-color: #006657;
+    transform: scale(1.05);
+  }
+
+  /* Page title */
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .about-text {
+      font-size: 1rem;
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
   <script>
@@ -266,138 +357,6 @@ spec:
     </div>
   </div>
 </section>
-
-<!-- Styles -->
-<style>
- /* Container styling */
-  #about .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-  }
-
-  .about-text {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.125rem;       /* slightly larger for readability */
-    line-height: 1.8;          /* gives breathing room between lines */
-    font-weight: 400;           /* normal weight for professional feel */
-    letter-spacing: 0.5px;     /* subtle spacing for clean look */
-    color: #444;               /* soft dark color, easier on eyes */
-    max-width: 800px;
-    margin: 1.5rem auto;       /* centered with spacing above & below */
-    text-align: center;         /* center-align for modern look */
-  }
-  /* Section title */
-  /* #about .page-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #008073;
-  } */
-
-  /* Card styling */
-  #about .card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  #about .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Headings inside card */
-  #about h5 {
-    font-size: 1.25rem;
-    color: #008073;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  /* Paragraphs and lists */
-  #about p,
-  #about li {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-  }
-
-  /* Code snippets */
-  #about pre,
-  #about code {
-    background: #f5f5f5;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
-  }
-
-  /* Lists styling */
-  #about ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Optional: subtle section background */
-  #about.section {
-    background: #f9fafb;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-  }
-
-  .btn {
-    padding: 0.75rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .back-btn {
-    background: #e0e0e0;
-    color: #333;
-  }
-
-  .back-btn:hover {
-    background: #d5d5d5;
-    transform: translateY(-2px);
-  }
-
-  .download-btn {
-    background: #008073;
-    color: #fff;
-  }
-
-  .download-btn:hover {
-    background: #00655f; /* slightly darker shade */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0, 128, 115, 0.3);
-  }
-
-</style>
-
-
-
 
 <!-- Eight Section: Contact -->
 <section id="contact" class="section scrollspy">
