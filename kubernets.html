@@ -1,69 +1,83 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Google Tag Manager -->
-   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PP9HNZQH');</script>
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style1.css" />
   <title>StackCouture | DevOps Portfolio</title>
 
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Naveen R | Senior Software Engineer" />
-  <meta property="og:description" content="Senior Software Engineer" />
-  <meta property="og:url" content="https://stackcouture.github.io/" />
-  <meta property="og:site_name" content="Naveen R | Senior Software Engineer" />
-  <meta property="article:publisher" content="https://stackcouture.github.io/" />>
-  <meta name="author" content="Naveen R" />
-  <meta name="description" content="StackCouture - Naveen R's DevOps Engineer portfolio showcasing AWS, Kubernetes, CI/CD and cloud automation projects.">
-  <meta name="keywords" content="StackCouture, DevOps, AWS, Kubernetes, portfolio, Naveen R">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="aIgjfbmm1qMCE_YQ9eMpC0ms-yLSd11YEHBcqQANt9Q" />
-  <style>
-    .side-nav .logo {
-  padding: 20px 0;
-  background: #004d40; /* or teal darken-4 */
-}
-.side-nav .logo img {
-  border: 2px solid white;
-}
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/assets/css/style1.css" />
 
+  <style>
+    /* General Body Styles */
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       color: #333;
       background-color: #f7f7f7;
+      scroll-behavior: smooth;
+    }
+
+    /* Intro Section */
+    #intro {
+      padding: 100px 20px 80px 20px; /* Top padding ensures it's below navbar */
+      background-color: #e0f2f1;
+      position: relative;
+      z-index: 1;
     }
 
     h4.page-title {
       font-weight: 700;
       color: #004d40;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+    }
+
+    #intro p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+    }
+
+    .btn-download,
+    .back-btn {
+      margin: 10px 5px;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: #fff;
+    }
+
+    .btn-download {
+      background: #009688;
+    }
+
+    .btn-download:hover {
+      background: #00796b;
+    }
+
+    .back-btn {
+      background: #00796b;
+    }
+
+    .back-btn:hover {
+      background: #004d40;
+    }
+
+    /* Content Section */
+    #content {
+      padding: 80px 20px;
+      margin-top: 20px;
     }
 
     .card {
@@ -92,27 +106,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 20px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .btn-download {
-      background: #009688;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .btn-download:hover {
-      background: #00796b;
-    }
-
     code {
       background: #eceff1;
       padding: 2px 4px;
@@ -124,162 +117,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-bottom: 10px;
     }
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      background: #00796b;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .back-btn:hover {
-      background: #004d40;
-    }
-
     /* Sticky Navbar */
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      background: #004d40;
+    }
+
+    nav ul.side-nav.fixed {
+      width: 220px;
+    }
+
+    nav ul.side-nav.fixed li.logo {
+      padding: 20px 0;
+      background: #004d40;
+    }
+
+    nav ul.side-nav.fixed li.logo img {
+      border: 2px solid white;
+      max-width: 80px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* ScrollSpy Active */
+    .table-of-contents .active a {
+      color: #009688 !important;
+      font-weight: 600;
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-PG8N77CWV9');
-  </script>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9HNZQH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
   <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section table-of-contents">
-
       <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
+        <a id="logo-container" href="#intro">
           <img src="/assets/img/passport-new.jpeg" class="circle img-responsive profile-pic" alt="avatar">
         </a>
       </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-      
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Naveen's resume in a new tab" href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
-      </li>
+      <li class="bold"><a href="#intro" class="waves-effect waves-dark teal-text">Intro</a></li>
+      <li class="bold"><a href="#content" class="waves-effect waves-dark teal-text">Content</a></li>
     </ul>
   </nav>
 
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Naveen
-        R</a><span class="black-text">Senior Software Engineer</span>
-    </div>
-  </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-    <li class="logo center-align" style="margin-top: 20px;">
-      <a href="#intro" aria-label="Navigate to the beginning of the page">
-        <img src="/assets/img/passport-new.jpeg"
-             alt="Naveen Profile Picture"
-             class="circle responsive-img"
-             style="max-width: 100px; border-radius: 50%;">
-      </a>
-    </li>
-
-    <li class="divider"></li>
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Naveen's Resume in a new tab"
-          href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-
-
-<main>
+  <main>
     <!-- Intro Section -->
     <section id="intro" class="section scrollspy">
       <div class="container center-align">
         <h4 class="page-title">Kubernetes Reference PDF</h4>
-        <p style="font-size: 1.1rem; max-width: 800px; margin: auto;">
+        <p>
           This reference document provides a comprehensive guide to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
         </p>
-
-        <!-- Buttons -->
         <a href="/index.html" class="back-btn">← Back to Home</a>
         <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn-download">Download PDF</a>
       </div>
@@ -357,37 +252,24 @@ spec:
         </div>
       </div>
     </section>
+  </main>
 
-
-
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ['DevOps Engineer', 'Cloud Enthusiast', 'Automation Architect'],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
-
-
-  <!-- jQuery-->
+  <!-- jQuery and Materialize JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Materialize - Compiled and minified JavaScript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+
   <script>
-    // Materialize - Initializers
     $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
+      // Initialize scrollspy
+      $(".scrollspy").scrollSpy({ scrollOffset: 80 });
+
+      // Initialize side nav for mobile
       $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+        menuWidth: 220,
+        edge: "left",
+        closeOnClick: true
+      });
+    });
   </script>
 </body>
 
