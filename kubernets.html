@@ -177,78 +177,149 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Main Content-->
   <main>
     <!-- Second Section: About -->
-            <section id="about" class="section scrollspy">
-            <h4 class="page-title">Kubernetes Guide</h4>
-            <div class="container">
-                <div class="card">
-                <div class="card-content">
-                    <h5>1. Core Concepts</h5>
-                    <ul>
-                    <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
-                    <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
-                    <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
-                    <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
-                    <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
-                    </ul>
+<!-- Second Section: About -->
+<section id="about" class="section scrollspy">
+  <div class="container center-align about-container">
+    <h4 class="page-title">Kubernetes Guide & Reference</h4>
+    <p class="about-text">
+      This guide provides a comprehensive reference to Kubernetes, combining theory with hands-on YAML examples, CI/CD integrations, container orchestration, and cloud-native deployments. Perfect for developers and DevOps engineers looking to streamline their Kubernetes workflow.
+    </p>
 
-                    <h5>2. Sample YAML Deployment</h5>
-                            <pre>
-                apiVersion: apps/v1
-                kind: Deployment
-                metadata:
-                name: my-app
-                spec:
-                replicas: 3
-                selector:
-                    matchLabels:
-                    app: my-app
-                template:
-                    metadata:
-                    labels:
-                        app: my-app
-                    spec:
-                    containers:
-                    - name: my-app-container
-                        image: my-app-image:latest
-                        ports:
-                        - containerPort: 8080
-                        readinessProbe:
-                        httpGet:
-                            path: /healthz
-                            port: 8080
-                        initialDelaySeconds: 5
-                        periodSeconds: 10
-                            </pre>
+    <!-- Buttons -->
+    <div class="button-group">
+      <a href="/index.html" class="btn back-btn">← Back to Home</a>
+      <a href="/assets/docs/Kubernetes_Reference.pdf" target="_blank" class="btn download-btn">Download PDF</a>
+    </div>
+  </div>
 
-                    <h5>3. ConfigMaps & Secrets</h5>
-                    <ul>
-                    <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
-                    <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
-                    </ul>
+  <div class="container" style="margin-top: 2rem;">
+    <div class="card">
+      <div class="card-content">
+        <h5>1. Core Concepts</h5>
+        <ul>
+          <li><b>Pods:</b> Smallest deployable unit in Kubernetes, encapsulating containers.</li>
+          <li><b>ReplicaSets:</b> Ensures specified number of pod replicas are running.</li>
+          <li><b>Deployments:</b> Declarative updates for Pods and ReplicaSets.</li>
+          <li><b>Services:</b> Expose your app as ClusterIP, NodePort, or LoadBalancer.</li>
+          <li><b>Namespaces:</b> Logical partitions of cluster resources.</li>
+        </ul>
 
-                    <h5>4. Services & Networking</h5>
-                    <ul>
-                    <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
-                    <li><code>NodePort</code>: Exposes service on each node's port.</li>
-                    <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
-                    </ul>
+        <h5>2. Sample YAML Deployment</h5>
+        <pre>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:latest
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        </pre>
 
-                    <h5>5. Helm Charts</h5>
-                    <ul>
-                    <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
-                    <li>Define <code>values.yaml</code> for configurable templates.</li>
-                    </ul>
+        <h5>3. ConfigMaps & Secrets</h5>
+        <ul>
+          <li>Use <code>ConfigMap</code> to store non-sensitive configuration data.</li>
+          <li>Use <code>Secret</code> for sensitive data like passwords, API keys.</li>
+        </ul>
 
-                    <h5>6. CI/CD Integration</h5>
-                    <ul>
-                    <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
-                    <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
-                    <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-            </section>
+        <h5>4. Services & Networking</h5>
+        <ul>
+          <li><code>ClusterIP</code>: Default service type, reachable only within cluster.</li>
+          <li><code>NodePort</code>: Exposes service on each node's port.</li>
+          <li><code>LoadBalancer</code>: Creates external load balancer for service access.</li>
+        </ul>
+
+        <h5>5. Helm Charts</h5>
+        <ul>
+          <li>Package Kubernetes applications with Helm for easy deployment and versioning.</li>
+          <li>Define <code>values.yaml</code> for configurable templates.</li>
+        </ul>
+
+        <h5>6. CI/CD Integration</h5>
+        <ul>
+          <li>Automate deployments using Jenkins, GitHub Actions, or GitLab CI/CD.</li>
+          <li>Scan images using Trivy or Snyk for vulnerabilities before deploying.</li>
+          <li>Use ArgoCD or FluxCD for GitOps-style continuous deployment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  /* Container card style */
+  .about-container {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 1rem auto 2rem auto;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Button styles */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .back-btn {
+    background: #e0e0e0;
+    color: #333;
+  }
+
+  .back-btn:hover {
+    background: #d5d5d5;
+    transform: translateY(-2px);
+  }
+
+  .download-btn {
+    background: #007bff;
+    color: #fff;
+  }
+
+  .download-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+</style>
+
 
 
 
