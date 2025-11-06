@@ -266,38 +266,97 @@ spec:
 
 <!-- Styles -->
 <style>
-  /* Container card style */
-  .about-container {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-  }
-
-  .about-text {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 1rem auto 2rem auto;
-    line-height: 1.6;
+ /* Container styling */
+  #about .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
   }
 
-  /* Button styles */
+  /* Section title */
+  #about .page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #008073;
+  }
+
+  /* Card styling */
+  #about .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #about .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Headings inside card */
+  #about h5 {
+    font-size: 1.25rem;
+    color: #008073;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Paragraphs and lists */
+  #about p,
+  #about li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  /* Code snippets */
+  #about pre,
+  #about code {
+    background: #f5f5f5;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Lists styling */
+  #about ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Optional: subtle section background */
+  #about.section {
+    background: #f9fafb;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .button-group {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
   }
 
   .btn {
-    padding: 0.7rem 1.5rem;
+    padding: 0.75rem 1.8rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .back-btn {
@@ -311,14 +370,16 @@ spec:
   }
 
   .download-btn {
-    background: #007bff;
+    background: #008073;
     color: #fff;
   }
 
   .download-btn:hover {
-    background: #0056b3;
+    background: #00655f; /* slightly darker shade */
     transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 128, 115, 0.3);
   }
+
 </style>
 
 
