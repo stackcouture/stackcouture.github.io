@@ -1193,3 +1193,16 @@ small {
   transform: scale(1.05);
 }
 
+/* Contact buttons — one row & smaller size */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* keeps it responsive */
+  gap: 12px;
+}
+
+.contact-item.btn-gradient {
+  font-size: 0.9rem;   /* smaller text */
+  padding: 7px 16px;   /* smaller buttons */
+}
