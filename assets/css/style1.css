@@ -1166,13 +1166,6 @@ small {
 .card-action .btn-gradient {
   color: #fff !important;
 } 
-/* Hover + Active Effects */
-.btn-gradient:hover,
-.btn-gradient:focus {
-  background: linear-gradient(90deg, #00796b, #004d40);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
 
 .btn-gradient:active {
   transform: scale(0.98);
