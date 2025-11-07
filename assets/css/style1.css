@@ -1203,10 +1203,13 @@ small {
 }
 
 .contact-intro {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #444;
-  margin-bottom: 35px;
-  line-height: 1.6;
+  margin-bottom: 45px;  /* more space before buttons */
+  line-height: 1.8;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --- Contact Links Layout --- */
@@ -1214,12 +1217,12 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;       /* all in one row */
+  flex-wrap: nowrap;
   gap: 15px;
   flex-direction: row;
 }
 
-/* --- Button Design (matches site .btn-gradient) --- */
+/* --- Button Design (matches .btn-gradient) --- */
 .contact-item.btn-gradient {
   display: flex;
   align-items: center;
@@ -1233,17 +1236,15 @@ small {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   text-transform: none;
-  white-space: nowrap;  /* keeps text in one line */
+  white-space: nowrap;
 }
 
-/* Hover effect */
 .contact-item.btn-gradient:hover {
   background: linear-gradient(90deg, #00796b, #004d40);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Icons */
 .contact-item i {
   font-size: 1.2rem;
 }
@@ -1251,7 +1252,7 @@ small {
 /* Responsive (stack vertically on smaller screens) */
 @media (max-width: 992px) {
   .contact-links {
-    flex-wrap: wrap;        /* allows wrapping on tablets/mobile */
+    flex-wrap: wrap;
     gap: 12px;
   }
   .contact-item.btn-gradient {
