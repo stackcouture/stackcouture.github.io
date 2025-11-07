@@ -422,10 +422,6 @@ h3 {
   transition: color 0.3s ease;
 }
 
-.card-action a:hover {
-  color: #004d40 !important;          /* darker teal on hover */
-}
-
 .card-action span {
   font-size: 85%;
   color: #666;
