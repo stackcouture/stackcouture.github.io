@@ -1192,3 +1192,65 @@ small {
 .docs-card:hover .card-image img {
   transform: scale(1.05);
 }
+
+/* --- Contact Card Styling --- */
+.contact-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 40px 30px;
+  background: #fff;
+}
+
+/* Intro paragraph */
+.contact-intro {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Contact links row */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between links */
+}
+
+/* Each contact link */
+.contact-item {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #009688, #00796b);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Hover effects */
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #00796b, #004d40);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .contact-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-item {
+    justify-content: center;
+    width: 100%;
+  }
+}
