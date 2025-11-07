@@ -1193,10 +1193,11 @@ small {
   transform: scale(1.05);
 }
 
-/* --- Contact Card Styling --- */
+
+/* Contact Card */
 .contact-card {
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   background: #fff;
 }
@@ -1209,48 +1210,45 @@ small {
   line-height: 1.6;
 }
 
-/* Contact links row */
+/* Contact buttons container */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* space between links */
+  gap: 15px;
 }
 
-/* Each contact link */
-.contact-item {
+/* Apply global button design */
+.contact-item.btn-gradient {
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #009688, #00796b);
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+  text-transform: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Button hover state (match your theme) */
+.contact-item.btn-gradient:hover {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon inside buttons */
 .contact-item i {
-  margin-right: 10px;
   font-size: 1.2rem;
 }
 
-/* Hover effects */
-.contact-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #00796b, #004d40);
-}
-
-/* Responsive layout */
+/* Responsive (stack buttons on mobile) */
 @media (max-width: 600px) {
   .contact-links {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 12px;
   }
-  .contact-item {
-    justify-content: center;
+  .contact-item.btn-gradient {
     width: 100%;
+    justify-content: center;
   }
 }
