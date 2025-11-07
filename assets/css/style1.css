@@ -1163,6 +1163,9 @@ small {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.card-action .btn-gradient {
+  color: #fff !important;
+} 
 /* Hover + Active Effects */
 .btn-gradient:hover,
 .btn-gradient:focus {
