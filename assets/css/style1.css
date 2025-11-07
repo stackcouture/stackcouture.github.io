@@ -1241,3 +1241,42 @@ small {
     font-size: 0.85rem;
   }
 }
+
+/* Education details styling */
+.education-details {
+  display: flex;
+  flex-wrap: wrap;              /* makes it responsive */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #444;
+  margin-top: 8px;
+}
+
+.education-details .college {
+  color: #795548;               /* brown text */
+  font-weight: 500;
+}
+
+.education-details .separator {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.education-details .degree {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .education-details {
+    flex-direction: column;     /* stack vertically on small screens */
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .education-details .separator {
+    display: none;
+  }
+}
