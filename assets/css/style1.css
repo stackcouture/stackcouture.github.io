@@ -1212,12 +1212,14 @@ small {
 /* --- Contact Links Layout --- */
 .contact-links {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;       /* all in one row */
   gap: 15px;
+  flex-direction: row;
 }
 
-/* --- Button Design: matches your .btn-gradient --- */
+/* --- Button Design (matches site .btn-gradient) --- */
 .contact-item.btn-gradient {
   display: flex;
   align-items: center;
@@ -1231,29 +1233,29 @@ small {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   text-transform: none;
+  white-space: nowrap;  /* keeps text in one line */
 }
 
-/* Hover effect consistent with site */
+/* Hover effect */
 .contact-item.btn-gradient:hover {
   background: linear-gradient(90deg, #00796b, #004d40);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Icons inside buttons */
+/* Icons */
 .contact-item i {
   font-size: 1.2rem;
 }
 
-/* Responsive (stack buttons vertically on mobile) */
-@media (max-width: 600px) {
+/* Responsive (stack vertically on smaller screens) */
+@media (max-width: 992px) {
   .contact-links {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;        /* allows wrapping on tablets/mobile */
     gap: 12px;
   }
   .contact-item.btn-gradient {
-    width: 100%;
+    flex: 1 1 100%;
     justify-content: center;
   }
 }
