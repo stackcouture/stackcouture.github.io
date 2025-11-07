@@ -1194,35 +1194,42 @@ small {
 }
 
 
-/* --- Contact Section Styling --- */
+/* --- Contact Section --- */
 .contact-card {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
+  padding: 50px 35px;
   background: #fff;
 }
 
+/* --- Contact Intro --- */
 .contact-intro {
-  font-size: 1.15rem;
-  color: #444;
-  margin-bottom: 45px;  /* more space before buttons */
+  font-size: 1.2rem;
+  color: #333;
   line-height: 1.8;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto 50px auto; /* centers & adds space before buttons */
+  text-align: center;
+  letter-spacing: 0.3px;
 }
 
-/* --- Contact Links Layout --- */
+.contact-intro br {
+  content: "";
+  display: block;
+  margin: 8px 0;
+}
+
+/* --- Contact Links Row --- */
 .contact-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 15px;
-  flex-direction: row;
 }
 
-/* --- Button Design (matches .btn-gradient) --- */
+/* --- Buttons --- */
 .contact-item.btn-gradient {
   display: flex;
   align-items: center;
@@ -1230,12 +1237,11 @@ small {
   background: linear-gradient(90deg, #009688, #00796b);
   color: #fff !important;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 25px;
   font-weight: 500;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  text-transform: none;
   white-space: nowrap;
 }
 
@@ -1249,14 +1255,22 @@ small {
   font-size: 1.2rem;
 }
 
-/* Responsive (stack vertically on smaller screens) */
+/* --- Responsive Layout --- */
 @media (max-width: 992px) {
+  .contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
   .contact-links {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
   }
   .contact-item.btn-gradient {
-    flex: 1 1 100%;
+    width: 100%;
     justify-content: center;
   }
 }
