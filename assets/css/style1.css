@@ -1194,7 +1194,7 @@ small {
 }
 
 
-/* Contact Card */
+/* --- Contact Section Styling --- */
 .contact-card {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1202,7 +1202,6 @@ small {
   background: #fff;
 }
 
-/* Intro paragraph */
 .contact-intro {
   font-size: 1.1rem;
   color: #444;
@@ -1210,7 +1209,7 @@ small {
   line-height: 1.6;
 }
 
-/* Contact buttons container */
+/* --- Contact Links Layout --- */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -1218,29 +1217,35 @@ small {
   gap: 15px;
 }
 
-/* Apply global button design */
+/* --- Button Design: matches your .btn-gradient --- */
 .contact-item.btn-gradient {
   display: flex;
   align-items: center;
   gap: 10px;
-  text-transform: none;
-  font-size: 1rem;
+  background: linear-gradient(90deg, #009688, #00796b);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-transform: none;
 }
 
-/* Button hover state (match your theme) */
+/* Hover effect consistent with site */
 .contact-item.btn-gradient:hover {
   background: linear-gradient(90deg, #00796b, #004d40);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Icon inside buttons */
+/* Icons inside buttons */
 .contact-item i {
   font-size: 1.2rem;
 }
 
-/* Responsive (stack buttons on mobile) */
+/* Responsive (stack buttons vertically on mobile) */
 @media (max-width: 600px) {
   .contact-links {
     flex-direction: column;
