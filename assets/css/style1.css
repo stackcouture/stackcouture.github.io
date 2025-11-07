@@ -1150,3 +1150,34 @@ small {
     margin-bottom: 20px !important;
   }
 }
+
+.btn-gradient {
+  background: linear-gradient(90deg, #009688, #00796b);
+  color: #fff !important;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover + Active Effects */
+.btn-gradient:hover,
+.btn-gradient:focus {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gradient:active {
+  transform: scale(0.98);
+}
+
+/* Ensure button is centered inside card-action */
+.card-action.center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
