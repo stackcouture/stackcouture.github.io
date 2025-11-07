@@ -1193,78 +1193,95 @@ small {
   transform: scale(1.05);
 }
 
-/* --- Contact Card --- */
+
+/* --- Contact Card Styling --- */
 .contact-card {
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 50px 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
   background: #fff;
+  transition: all 0.3s ease;
 }
 
-/* --- Contact Intro Paragraph --- */
-.contact-intro {
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Paragraph (same as about-text style) --- */
+.about-text {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.8;
   font-weight: 400;
-  max-width: 800px;
-  margin: 0 auto 40px auto; /* ensures spacing below the paragraph */
+  max-width: 850px;
+  margin: 0 auto 30px auto;
   text-align: center;
-  letter-spacing: 0.3px;
 }
 
-/* --- Contact Buttons Container --- */
-.contact-links {
+/* --- Buttons container --- */
+.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* wraps on smaller screens */
+  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 10px;
 }
 
-/* --- Individual Buttons --- */
-.contact-item.btn-gradient {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* --- Gradient button --- */
+.btn-gradient {
   background: linear-gradient(90deg, #009688, #00796b);
   color: #fff !important;
-  text-decoration: none;
-  padding: 8px 18px; /* smaller buttons */
+  padding: 8px 20px;
   border-radius: 25px;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
 }
 
-.contact-item.btn-gradient:hover {
+.btn-gradient:hover {
   background: linear-gradient(90deg, #00796b, #004d40);
   transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
-.contact-item i {
-  font-size: 1rem;
+/* --- Outline button --- */
+.contact-outline {
+  background: #fff;
+  color: #009688 !important;
+  border: 2px solid #009688;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-/* --- Responsive Layout --- */
+.contact-outline:hover {
+  background: #009688;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsive adjustments --- */
 @media (max-width: 992px) {
-  .contact-intro {
+  .about-text {
     font-size: 1rem;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     padding: 0 10px;
   }
 }
 
 @media (max-width: 600px) {
-  .contact-links {
+  .buttons {
     flex-direction: column;
     gap: 10px;
   }
-  .contact-item.btn-gradient {
+  .btn-gradient,
+  .contact-outline {
     width: 90%;
     justify-content: center;
   }
