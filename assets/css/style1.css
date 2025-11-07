@@ -1193,15 +1193,14 @@ small {
   transform: scale(1.05);
 }
 
-/* Force contact buttons in one row */
+/* Contact buttons — one row & smaller size */
 .contact-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* force single row */
+  flex-wrap: wrap; /* keeps it responsive */
   gap: 12px;
   margin-top: 15px;
-  overflow-x: auto;  /* makes it scrollable on small screens */
 }
 
 .contact-item.btn-gradient {
