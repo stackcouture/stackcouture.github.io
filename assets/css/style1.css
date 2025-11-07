@@ -1207,3 +1207,10 @@ small {
   font-size: 0.9rem;   /* smaller text */
   padding: 7px 16px;   /* smaller buttons */
 }
+
+#contact a:not(.btn-floating) {
+    bottom: 0px;
+    left: 20px;
+    position: relative;
+    top: 14px;
+}
