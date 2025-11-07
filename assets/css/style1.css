@@ -1193,8 +1193,7 @@ small {
   transform: scale(1.05);
 }
 
-
-/* --- Contact Section --- */
+/* --- Contact Card --- */
 .contact-card {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1202,64 +1201,60 @@ small {
   background: #fff;
 }
 
-/* --- Contact Intro --- */
+/* --- Contact Intro Paragraph --- */
 .contact-intro {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
   line-height: 1.8;
   font-weight: 400;
   max-width: 800px;
-  margin: 0 auto 50px auto; /* centers & adds space before buttons */
+  margin: 0 auto 40px auto; /* ensures spacing below the paragraph */
   text-align: center;
   letter-spacing: 0.3px;
 }
 
-.contact-intro br {
-  content: "";
-  display: block;
-  margin: 8px 0;
-}
-
-/* --- Contact Links Row --- */
+/* --- Contact Buttons Container --- */
 .contact-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-wrap: wrap; /* wraps on smaller screens */
+  gap: 12px;
+  margin-top: 10px;
 }
 
-/* --- Buttons --- */
+/* --- Individual Buttons --- */
 .contact-item.btn-gradient {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: linear-gradient(90deg, #009688, #00796b);
   color: #fff !important;
   text-decoration: none;
-  padding: 10px 22px;
+  padding: 8px 18px; /* smaller buttons */
   border-radius: 25px;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
 
 .contact-item.btn-gradient:hover {
   background: linear-gradient(90deg, #00796b, #004d40);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
 .contact-item i {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* --- Responsive Layout --- */
 @media (max-width: 992px) {
   .contact-intro {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+    font-size: 1rem;
+    margin-bottom: 35px;
     padding: 0 10px;
   }
 }
@@ -1267,10 +1262,10 @@ small {
 @media (max-width: 600px) {
   .contact-links {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
   .contact-item.btn-gradient {
-    width: 100%;
+    width: 90%;
     justify-content: center;
   }
 }
