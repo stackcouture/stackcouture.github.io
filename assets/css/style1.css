@@ -1193,4 +1193,70 @@ small {
   transform: scale(1.05);
 }
 
+/* --- Contact Section Styling --- */
+.contact-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  background: #fff;
+}
 
+.contact-intro {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 45px; /* Increased space before buttons */
+  line-height: 1.7;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* --- Contact Links Layout --- */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* --- Buttons (smaller, one-row style) --- */
+.contact-item.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #009688, #00796b);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 7px 16px; /* smaller padding */
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem; /* smaller text */
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover effect */
+.contact-item.btn-gradient:hover {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Icons inside buttons */
+.contact-item i {
+  font-size: 1rem;
+}
+
+/* Responsive: Stack vertically on small screens */
+@media (max-width: 600px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact-item.btn-gradient {
+    width: 90%;
+    justify-content: center;
+  }
+}
