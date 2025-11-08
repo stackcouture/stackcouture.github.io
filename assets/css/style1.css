@@ -1449,11 +1449,13 @@ small {
 /* Contact buttons — one row on desktop, responsive on mobile */
 .contact-links {
   display: flex;
-  flex-wrap: wrap;            /* allows wrapping on small screens */
-  justify-content: center;    /* center align all links */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 16px;                  /* even spacing between buttons */
-  margin-top: 20px;
+  gap: 16px;
+  margin: 20px auto;
+  width: 90%;               /* ✅ Keeps layout consistent on large screens */
+  max-width: 1100px;        /* Optional: prevents overly wide spreading */
 }
 
 .contact-item {
