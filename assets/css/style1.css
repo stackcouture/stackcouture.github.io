@@ -1740,9 +1740,10 @@ small {
 
 /* University Name */
 .university-name {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 8px;
+    margin-bottom: 1.5rem;
 }
 
 .university-name a {
