@@ -1069,49 +1069,40 @@ small {
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin: 20px auto;
+  flex-wrap: wrap;            /* allow wrapping */
+  justify-content: center;     /* center horizontally */
+  gap: 16px;                   /* spacing between buttons */
+  margin-top: 20px;
   max-width: 1200px;
-  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Buttons */
 .contact-item {
+  flex: 1 1 calc(50% - 16px); /* default: 2 per row */
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  text-align: center;
   background: linear-gradient(90deg, #009688, #00796b);
   color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  flex: 1 1 calc(50% - 16px); /* default 2 per row */
-  box-sizing: border-box;
+  min-width: 180px;
 }
 
 .contact-item i {
   margin-right: 8px;
+  font-size: 1.2rem;
 }
 
-/* Hover effect */
 .contact-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
-
-    
-
-/* Subtle hover effect for interaction */
-/* .page-title:hover {
-  background-color: #00695c;
-  transition: all 0.3s ease;
-} */
 
   @media (max-width: 768px) {
     .about-card {
@@ -1243,6 +1234,18 @@ small {
     flex: 1 1 100%;
   }
 
+    }
+
+    @media (max-width: 991px) {
+      .contact-item {
+        flex: 1 1 100%;
+      }
+    }
+
+     @media (min-width: 1400px) {
+      .contact-item {
+        flex: 1 1 calc(25% - 16px);
+      }
     }
 
     /* ==== Project Card Enhancements ==== */
