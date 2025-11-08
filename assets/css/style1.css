@@ -1339,3 +1339,110 @@ small {
     display: none;
   }
 }
+
+/* === Project Cards Unified Style (Match Docs Look) === */
+#projects .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* === Image section smaller & centered === */
+#projects .card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  padding: 15px;
+}
+
+#projects .card-image img {
+  width: 80%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#projects .card-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === Card Content (title & description) === */
+#projects .card-content {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+#projects .card-title {
+  color: #004d40;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+  display: block;
+}
+
+#projects .card-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* === Card Reveal cleanup === */
+#projects .card-reveal {
+  background-color: #fff;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+#projects .card-reveal ul {
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#projects .card-reveal li {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+/* === Action buttons === */
+#projects .card-action {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#projects .btn-floating {
+  background: #009688 !important;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+#projects .btn-floating:hover {
+  background: #00796b !important;
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 992px) {
+  #projects .card-image img {
+    width: 70%;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  #projects .card-image img {
+    width: 65%;
+    max-height: 80px;
+  }
+}
