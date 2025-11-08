@@ -435,7 +435,6 @@ h3 {
   
   .contact-item {
     white-space: nowrap;    /* prevent internal wrapping */
-    flex: 0 1 auto;         /* allow shrinking slightly if needed */
   }
   
 }
@@ -1180,7 +1179,7 @@ small {
     padding: 0px 5px;
   }
 
-  .contact-links {
+.contact-links {
     flex-direction: column;
     gap: 12px;
   }
@@ -1469,33 +1468,44 @@ small {
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap;          /* allow wrapping on smaller screens */
-  justify-content: center;  /* center horizontally */
+  flex-wrap: wrap;            /* allow wrapping on smaller screens */
+  justify-content: center;     /* center buttons horizontally */
   align-items: center;
-  gap: 16px;
-  width: 100%;              /* full width of parent */
-  max-width: 1400px;
-  margin: 20px auto;
+  gap: 16px;                  /* spacing between buttons */
+  width: 90%;                 /* gives breathing room on large screens */
+  max-width: 1400px;          /* limits container width */
+  margin: 20px auto;           /* center in section */
 }
 
 .contact-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
+  gap: 8px;                   /* space between icon and text */
+  padding: 12px 20px;         /* comfortable button padding */
   border-radius: 30px;
   text-decoration: none;
-  color: #fff;
   font-weight: 500;
-  white-space: normal;      /* allow wrapping of text inside button */
-  min-width: 0;             /* prevent overflow from flex container */
-  word-break: break-word;   /* break long text if needed */
-  flex: 1 1 auto;           /* allow buttons to grow/shrink naturally */
-  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  white-space: normal;         /* allow wrapping inside button if needed */
+  word-break: break-word;      /* break long URLs nicely */
+  text-align: left;            /* align icon + text properly */
+  flex: 1 1 auto;              /* allow flex grow/shrink naturally */
+  min-width: 220px;            /* prevents shrinking too much */
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #009688, #26a69a);
 }
 
+/* === ICON STYLE === */
 .contact-item i {
-  flex-shrink: 0;
+  flex-shrink: 0;              /* icon never shrinks */
+  font-size: 1.2rem;
+}
+
+/* === HOVER EFFECT === */
+.contact-item:hover {
+  background: linear-gradient(45deg, #26a69a, #009688);
+  transform: translateY(-2px);
 }
 
 
