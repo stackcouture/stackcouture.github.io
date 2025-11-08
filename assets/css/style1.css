@@ -1445,17 +1445,18 @@ small {
   background: #00796b !important;
 }
 
-/* === Responsive adjustments === */
+/* Tablets (max-width: 992px) */
 @media (max-width: 992px) {
   #projects .card-image img {
-    width: 70%;
-    max-height: 100px;
+    height: 180px;   /* slightly smaller image height */
+    width: 100%;     /* still full card width */
   }
 }
 
+/* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
   #projects .card-image img {
-    width: 65%;
-    max-height: 80px;
+    height: 150px;   /* more compact for mobile screens */
+    width: 100%;     /* full width */
   }
 }
