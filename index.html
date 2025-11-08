@@ -1106,15 +1106,22 @@ $(document).ready(function() {
   $(".button-collapse").sideNav({
     menuWidth: 240,
     edge: "left",
-    closeOnClick: true
+    closeOnClick: true // this ensures the menu closes after click
   });
 
-  // Smooth scrolling for all links
+  // Smooth scrolling for all links (desktop + mobile)
   $('a[href^="#"]').click(function(e) {
-    e.preventDefault();
     var target = $($(this).attr('href'));
     if(target.length) {
-      $('html, body').animate({ scrollTop: target.offset().top - 20 }, 500);
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top - 20
+      }, 500);
+
+      // Close mobile side-nav if open
+      if ($('.button-collapse').is(':visible')) {
+        $(".button-collapse").sideNav('hide');
+      }
     }
   });
 
