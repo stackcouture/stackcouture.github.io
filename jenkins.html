@@ -1,0 +1,347 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PP9HNZQH');</script>
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style1.css" />
+  <title>StackCouture | Jenkins Guide</title>
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Naveen R | Jenkins Guide" />
+  <meta property="og:description" content="Senior Software Engineer" />
+  <meta property="og:url" content="https://stackcouture.github.io/" />
+  <meta property="og:site_name" content="StackCouture | Jenkins Reference" />
+  <meta property="article:publisher" content="https://stackcouture.github.io/" />>
+  <meta name="author" content="Naveen R" />
+  <meta name="description" content="StackCouture - Naveen R's Jenkins CI/CD reference guide covering core concepts, pipelines and automation practices for DevOps engineers.">
+  <meta name="keywords" content="StackCouture, DevOps, AWS, Kubernetes, portfolio, Naveen R">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="aIgjfbmm1qMCE_YQ9eMpC0ms-yLSd11YEHBcqQANt9Q" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+  <style>
+    .side-nav .logo {
+  padding: 20px 0;
+  background: #004d40; /* or teal darken-4 */
+}
+.side-nav .logo img {
+  border: 2px solid white;
+}
+
+.jenkins-content {
+  font-size: 1.15rem;
+  color: #004d40;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  border-left: 3px solid #009688;
+  padding-left: 10px;
+  letter-spacing: 0.3px;
+}
+
+.card-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card-content pre {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222;
+  border-left: 3px solid #009688;
+}
+
+
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG8N77CWV9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PG8N77CWV9');
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9HNZQH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <!-- Navigation Menu-->
+  <!-- Nav class 1 -->
+  <nav class="hide-on-small-only">
+    <ul class="side-nav fixed section table-of-contents">
+
+      <li class="logo">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+          class="brand-logo grey-blue-text">
+          <img src="/assets/img/passport-new.jpeg" class="circle img-responsive profile-pic" alt="avatar">
+        </a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+            <i class="mdi mdi-home small"></i><span>Home</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text">
+            <i class="mdi mdi-jenkins small"></i><span>Jenkins Guide</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Open Naveen's resume in a new tab" href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
+        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nav class 2 -->
+  <nav class="hide-on-large only trigger z-depth-1">
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Naveen
+        R</a><span class="black-text">Senior Software Engineer</span>
+    </div>
+  </nav>
+
+  <!-- Nav class 3 -->
+  <nav class="hide-on-large only">
+    <ul id="slide-out" class="side-nav">
+    <li class="logo center-align" style="margin-top: 20px;">
+      <a href="#intro" aria-label="Navigate to the beginning of the page">
+        <img src="/assets/img/passport-new.jpeg"
+             alt="Naveen Profile Picture"
+             class="circle responsive-img"
+             style="max-width: 100px; border-radius: 50%;">
+      </a>
+    </li>
+
+    <li class="divider"></li>
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="index.html" class="waves-effect waves-dark teal-text">
+            <i class="mdi mdi-home small"></i><span>Home</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text">
+            <i class="mdi mdi-docker small"></i><span>Docker Guide</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Open Naveen's Resume in a new tab"
+          href="https://stackcouture.github.io/assets/resume/NaveenRamlu_DevOpsEngineer_4Years_5YearsIT.pdf" target="_blank"
+          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content-->
+  <main>
+<section id="about" class="section scrollspy">
+      <h4 class="page-title">Jenkins Guide & Reference</h4>
+      <div class="container center-align about-container">
+        <div class="card">
+          <div class="card-content">
+            <p class="about-text center-align">
+              This Jenkins guide provides a complete reference — covering installation, configuration, core concepts, 
+              and hands-on CI/CD Pipeline examples for developers and DevOps engineers looking to automate their delivery workflows.
+            </p>
+
+            <div class="buttons" style="margin-top: 10px; margin-bottom: 20px;">
+              <a href="/index.html" class="readme"
+                style="background: linear-gradient(90deg, #009688, #00796b);
+                color: #fff; padding: 10px 20px; border-radius: 25px;
+                font-weight: 600; text-decoration: none; margin-right: 10px;">
+                ← Back to Home
+              </a>
+              <a href="/assets/docs/Jenkins_Reference.pdf" target="_blank" class="contactme"
+                style="background: #fff; color: #009688; border: 2px solid #009688;
+                padding: 10px 20px; border-radius: 25px; font-weight: 600; text-decoration: none;">
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="margin-top: 2rem;">
+        <div class="card">
+          <div class="card-content">
+
+            <h5 class="jenkins-content">1. Core Concepts</h5>
+            <ul>
+              <li><b>Master & Agents:</b> Jenkins can distribute builds across multiple nodes for scalability.</li>
+              <li><b>Pipeline:</b> A sequence of automated steps defined as code to build, test, and deploy software.</li>
+              <li><b>Plugins:</b> Extend Jenkins functionality (e.g., GitHub, Docker, Kubernetes, Slack).</li>
+              <li><b>Declarative vs Scripted:</b> Two syntaxes for defining Jenkins pipelines.</li>
+              <li><b>Artifacts & Workspace:</b> Temporary build data and output files generated during jobs.</li>
+            </ul>
+
+            <h5 class="jenkins-content">2. Declarative Pipeline Example</h5>
+<pre>
+pipeline {
+  agent any
+
+  environment {
+    DOCKER_IMAGE = "myapp:latest"
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', url: 'https://github.com/stackcouture/sample-app.git'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'docker build -t $DOCKER_IMAGE .'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh 'npm test'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'docker run -d -p 8080:80 $DOCKER_IMAGE'
+      }
+    }
+  }
+
+  post {
+    always {
+      echo 'Pipeline complete.'
+    }
+  }
+}
+</pre>
+
+            <h5 class="jenkins-content">3. Scripted Pipeline Example</h5>
+<pre>
+node {
+  stage('Checkout') {
+    git 'https://github.com/stackcouture/sample-app.git'
+  }
+
+  stage('Build') {
+    sh 'mvn clean package'
+  }
+
+  stage('Test') {
+    sh 'mvn test'
+  }
+
+  stage('Deploy') {
+    sh 'scp target/app.jar ubuntu@server:/opt/app/'
+  }
+
+  stage('Notify') {
+    echo 'Build and deployment complete.'
+  }
+}
+</pre>
+
+            <h5 class="jenkins-content">4. CI/CD Integration Examples</h5>
+            <ul>
+              <li><b>GitHub Webhooks:</b> Trigger Jenkins builds automatically on push events.</li>
+              <li><b>Docker Integration:</b> Use Docker agents and publish containerized builds.</li>
+              <li><b>Kubernetes:</b> Deploy build agents dynamically using Jenkins Kubernetes plugin.</li>
+              <li><b>Slack Notifications:</b> Send build status updates to Slack channels.</li>
+            </ul>
+
+            <h5 class="jenkins-content">5. Useful CLI & Admin Commands</h5>
+            <ul>
+              <li>Restart Jenkins: <code>sudo systemctl restart jenkins</code></li>
+              <li>List installed plugins: <code>jenkins-cli.jar -s http://localhost:8080/ list-plugins</code></li>
+              <li>Run job via CLI: <code>jenkins-cli.jar -s http://localhost:8080/ build my-job</code></li>
+              <li>Backup config: <code>tar -czf jenkins_backup.tar.gz /var/lib/jenkins</code></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- typed.js -->
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script type="text/javascript">
+    var typed = new Typed('.typing',{
+      strings: ['DevOps Engineer', 'Cloud Enthusiast', 'Automation Architect'],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
+    });
+  </script>
+
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Materialize - Compiled and minified JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    // Materialize - Initializers
+    $(document).ready(function () {
+      $(".scrollspy").scrollSpy()
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+        menuWidth: 190, // Default is 240
+        edge: "left", // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      })
+    })
+  </script>
+</body>
+
+</html>
