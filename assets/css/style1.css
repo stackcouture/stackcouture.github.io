@@ -1,3 +1,41 @@
+/* === Global Responsiveness (from previous patch) === */
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+.section.full-height {
+  min-height: 100vh;
+  height: auto !important;
+}
+
+@media (min-width: 992px) {
+  main {
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}
+
+/* Prevent image overflow and layout breaking */
+.profile-pic img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#intro.section {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  overflow: visible !important;
+}
 .profile-pic {
   position: relative;
   max-width:130px;
@@ -15,15 +53,8 @@
   border-radius: 50% !important;
 }
 
-.profile-pic img {
-  width: 100%;
-  height: auto;
-}
-
 .tracker {
-  /* visibility: hidden; */
   position: fixed;
-  /* margin-inline-end: auto;  */
   bottom: 0; 
   right: 0;
 }
@@ -1342,11 +1373,19 @@ small {
 
 /* === Project Cards Unified Style (Match Docs Look) === */
 #projects .card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#projects .col.s12.m6.l4 {
+  padding: 0 10px; /* reduce spacing so layout fits better at 100% zoom */
+}
+
 
 #projects .card:hover {
   transform: translateY(-6px);
@@ -1362,23 +1401,11 @@ small {
   padding: 15px;
 }
 
-/* #projects .card-image img {
-  width: 90%;
-  height: auto;
-  max-height: 120px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-#projects .card-image img:hover {
-  transform: scale(1.05);
-} */
-
 #projects .card-image img {
-  height: 230px;           /* adjust this value for your preferred image height */
-  width: 100%;             /* ensures image fills the card width */
-  object-fit: cover;       /* crops neatly without distortion */
-  border-radius: 6px 6px 0 0; /* optional: rounds top corners slightly */
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
   transition: transform 0.3s ease-in-out;
 }
 
