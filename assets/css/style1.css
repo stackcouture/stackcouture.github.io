@@ -1676,3 +1676,55 @@ small {
     width: 100%;     /* full width */
   }
 }
+
+@media (max-width: 1386px) {
+  /* === Contact Links Section === */
+  .contact-links {
+    width: 90%;                     /* prevents overflow and wrapping */
+    justify-content: center;        /* keeps all items centered */
+    gap: 14px;                      /* slightly smaller spacing */
+  }
+
+  .contact-item {
+    padding: 10px 16px;             /* reduce padding slightly for fit */
+    font-size: 0.95rem;
+  }
+
+  .contact-item span {
+    font-size: 0.95rem;
+  }
+
+  /* === Experience / Card Adjustments === */
+  #experience .container {
+    width: 95%;                     /* narrower container for cleaner layout */
+    margin: 0 auto;
+  }
+
+  .horizontal-content {
+    flex-wrap: wrap;                /* allows better stacking on medium screens */
+  }
+
+  .logo-container {
+    flex: 0 0 100px;                /* slightly smaller logo */
+    margin-bottom: 12px;
+  }
+
+  .experience-details .card-title {
+    font-size: 1.15rem;             /* slightly smaller title */
+  }
+
+  .experience-details .role {
+    font-size: 0.95rem;
+  }
+
+  .card ul li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-left: 15px;
+  }
+
+  /* Optional: Reduce intro tagline width for better readability */
+  #intro .tagline {
+    max-width: 800px;
+  }
+}
