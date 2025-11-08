@@ -441,14 +441,6 @@ h3 {
     max-width: 120px;
     height: auto;
   }
-
-  .contact-links {
-    flex-wrap: nowrap;          /* keep on a single line */
-  }
-
-  .contact-item {
-    white-space: nowrap;
-  }
   
 }
 
@@ -1075,6 +1067,45 @@ small {
     animation: fadeIn 0.6s ease;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;             /* allow wrapping */
+  justify-content: center;      /* center items horizontally */
+  gap: 16px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+  width: calc(50% - 16px);      /* default 2 per row */
+  transition: transform 0.2s;
+}
+
+.contact-item i {
+  margin-right: 8px;
+}
+
+/* Hover effect */
+.contact-item:hover {
+  transform: translateY(-2px);
+}
+
+
     
 
 /* Subtle hover effect for interaction */
@@ -1203,20 +1234,20 @@ small {
     padding: 0px 5px;
   }
 
- .contact-links {
-    flex-direction: column;      /* stack buttons vertically */
+  #projects .card-image img {
+    height: 150px;       /* more compact for mobile screens */
+    width: 90%;         /* full width */
+    object-fit: cover;
+  }
+
+  .contact-links {
+    flex-direction: column;
     gap: 12px;
   }
 
   .contact-item {
     width: 100%;
     justify-content: center;
-  }
-
-  #projects .card-image img {
-    height: 150px;       /* more compact for mobile screens */
-    width: 90%;         /* full width */
-    object-fit: cover;
   }
 
     }
@@ -1369,6 +1400,16 @@ small {
     right: initial;
     top: initial;
   }
+   .contact-item {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (min-width: 1386px) {
+  .contact-item {
+    width: calc(25% - 16px);   /* 4 buttons per row */
+  }
 }
 
 @media (max-width: 600px) {
@@ -1496,44 +1537,6 @@ small {
   }
 }
 
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;             /* wrap items to multiple rows */
-  justify-content: center;      /* center horizontally */
-  align-items: flex-start;
-  gap: 16px;                    /* spacing between buttons */
-  margin-top: 20px;
-}
-
-.contact-item {
-  flex: 1 1 calc(50% - 16px);  /* 2 items per row with gap accounted */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 10px 16px;
-  box-sizing: border-box;
-  white-space: nowrap;          /* prevent internal wrapping */
-  font-size: 0.95rem;
-}
-
-/* Icons inside buttons */
-.contact-item i {
-  flex-shrink: 0;
-  font-size: 1.2rem;
-}
-
-/* Hover effect */
-.contact-item:hover {
-  background: linear-gradient(45deg, #26a69a, #009688);
-  transform: translateY(-2px);
-}
-
-.contact-item.btn-gradient {
-  font-size: 0.9rem;     /* slightly smaller font */
-  padding: 7px 16px;     /* compact button size */
-  white-space: nowrap;   /* prevents text breaking mid-word */
-}
 
 /* Fix unwanted link positioning */
 #contact a:not(.btn-floating) {
@@ -1541,18 +1544,6 @@ small {
   top: 0;
   left: 0;
   bottom: 0;
-}
-
-/* Responsive behavior */
-@media (max-width: 992px) {
-  .contact-links {
-    gap: 10px;
-    justify-content: center;
-  }
-  .contact-item.btn-gradient {
-    font-size: 0.85rem;
-    padding: 6px 14px;
-  }
 }
 
 
@@ -1607,16 +1598,6 @@ small {
   }
   .education-details .separator {
     display: none;
-  }
-
-  .contact-links {
-    flex-direction: column;   /* stack buttons vertically */
-    gap: 12px;
-  }
-
-  .contact-item {
-    width: 100%;
-    justify-content: center;
   }
 }
 
@@ -1738,20 +1719,6 @@ small {
 }
 
 @media (max-width: 1386px) {
-.contact-links {
-    width: 90%;                 /* prevent overflow */
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .contact-item {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
-
-  .contact-item span {
-    font-size: 0.95rem;
-  }
 
   /* === Experience / Card Adjustments === */
   #experience .container {
