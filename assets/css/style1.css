@@ -1014,9 +1014,16 @@ small {
   }
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
+  }
+} */
+
+@media (min-width: 1200px) {
+  #experience .container {
+    width: 1200px; /* good balance for large desktops */
+    margin: 0 auto;
   }
 }
 
