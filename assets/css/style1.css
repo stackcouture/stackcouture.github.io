@@ -1678,29 +1678,49 @@ small {
     text-transform: uppercase;
 }
 
-/* 2. Center contact links */
+/* Container for all contact links */
 .contact-links {
     display: flex;
-    justify-content: center;   /* centers horizontally */
-    align-items: center;       /* centers vertically */
+    justify-content: center;   /* centers all items horizontally */
     flex-wrap: wrap;           /* allows wrapping on smaller screens */
-    gap: 20px;                 /* spacing between links */
-    margin: 20px 0;            /* optional spacing from top/bottom */
+    gap: 20px;                 /* spacing between each contact item */
+    margin-top: 20px;
 }
 
+/* Each contact item */
 .contact-links a.contact-item {
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #004d40;            /* optional: color for contact links */
-    font-weight: 500;
+    align-items: center;       /* vertically aligns icon + text */
     gap: 8px;                  /* space between icon and text */
+    color: inherit;            /* keeps text default color */
+    font-weight: 500;
+    text-transform: lowercase; /* small letters for text */
+    text-decoration: none;      /* remove underline */
+    transition: color 0.3s ease;
 }
 
-/* Optional: smaller screens */
+/* Icon only styling */
+.contact-links a.contact-item i {
+    color: rgb(0, 150, 136);   /* teal color for icon */
+    font-size: 1.2rem;         /* adjust icon size */
+    transition: color 0.3s ease;
+}
+
+/* Optional hover effect */
+.contact-links a.contact-item:hover i {
+    color: #00796b;            /* darker teal on hover */
+}
+
+/* Text span styling */
+.contact-links a.contact-item span {
+    color: inherit;            /* text keeps body color */
+}
+
+/* Responsive tweaks for small screens */
 @media (max-width: 600px) {
     .contact-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;   /* stack vertically */
+        align-items: center;      /* center items */
+        gap: 12px;                /* smaller spacing for mobile */
     }
 }
