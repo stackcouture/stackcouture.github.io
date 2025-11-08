@@ -1099,17 +1099,13 @@ I’m deeply focused on DevSecOps, GitOps and the evolution of AI-driven automat
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
   <script>
 $(document).ready(function() {
-  // Initialize Scrollspy
   $('.scrollspy').scrollSpy();
-
-  // Initialize mobile side-nav
   $(".button-collapse").sideNav({
     menuWidth: 240,
     edge: "left",
-    closeOnClick: true // this ensures the menu closes after click
+    closeOnClick: true
   });
 
-  // Smooth scrolling for all links (desktop + mobile)
   $('a[href^="#"]').click(function(e) {
     var target = $($(this).attr('href'));
     if(target.length) {
@@ -1118,18 +1114,10 @@ $(document).ready(function() {
         scrollTop: target.offset().top - 20
       }, 500);
 
-      // Close mobile side-nav if open
       if ($('.button-collapse').is(':visible')) {
         $(".button-collapse").sideNav('hide');
       }
     }
-  });
-
-  // Optional: Highlight active link in mobile nav
-  $('.scrollspy').on('scrollSpy:enter', function() {
-    var id = $(this).attr('id');
-    $('#slide-out li a').removeClass('active');
-    $('#slide-out li a[href="#' + id + '"]').addClass('active');
   });
 });
 </script>
