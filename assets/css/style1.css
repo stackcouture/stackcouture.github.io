@@ -443,11 +443,11 @@ h3 {
   }
 
   .contact-links {
-    flex-wrap: nowrap;      /* keep on single line for large screens */
+    flex-wrap: nowrap;          /* keep on a single line */
   }
-  
+
   .contact-item {
-    white-space: nowrap;    /* prevent internal wrapping */
+    white-space: nowrap;
   }
   
 }
@@ -506,6 +506,11 @@ h3 {
     height: 150px;       /* slightly smaller image height */
     width: 90%;         /* full card width */
     object-fit: cover;
+  }
+
+  .contact-item.btn-gradient {
+    font-size: 0.85rem;
+    padding: 6px 14px;
   }
 }
 
@@ -1198,14 +1203,14 @@ small {
     padding: 0px 5px;
   }
 
-.contact-links {
-    flex-direction: column;
+ .contact-links {
+    flex-direction: column;      /* stack buttons vertically */
     gap: 12px;
   }
 
   .contact-item {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 
   #projects .card-image img {
@@ -1493,32 +1498,23 @@ small {
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap;            /* wrap items to create two columns */
-  justify-content: center;     /* center horizontally */
+  flex-wrap: wrap;             /* wrap items to multiple rows */
+  justify-content: center;      /* center horizontally */
   align-items: flex-start;
-  gap: 16px;                  /* spacing between buttons */
+  gap: 16px;                    /* spacing between buttons */
   margin-top: 20px;
 }
 
-/* Each contact item */
 .contact-item {
+  flex: 1 1 calc(50% - 16px);  /* 2 items per row with gap accounted */
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  border-radius: 30px;
+  justify-content: center;
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-  background: linear-gradient(45deg, #009688, #26a69a);
-  flex: 1 1 calc(50% - 16px);  /* 2 columns layout */
-  min-width: 200px;            /* ensures buttons don't shrink too much */
-  max-width: 400px;            /* optional, keeps buttons readable */
-  white-space: normal;         /* allow wrapping for long URLs */
-  word-break: break-word;
-  text-align: left;
-  transition: all 0.3s ease;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  white-space: nowrap;          /* prevent internal wrapping */
+  font-size: 0.95rem;
 }
 
 /* Icons inside buttons */
@@ -1742,15 +1738,14 @@ small {
 }
 
 @media (max-width: 1386px) {
-  /* === Contact Links Section === */
-  .contact-links {
-    width: 90%;                     /* prevents overflow and wrapping */
-    justify-content: center;        /* keeps all items centered */
-    gap: 14px;                      /* slightly smaller spacing */
+.contact-links {
+    width: 90%;                 /* prevent overflow */
+    justify-content: center;
+    gap: 14px;
   }
 
   .contact-item {
-    padding: 10px 16px;             /* reduce padding slightly for fit */
+    padding: 10px 14px;
     font-size: 0.95rem;
   }
 
