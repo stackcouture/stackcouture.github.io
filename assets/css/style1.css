@@ -1,14 +1,10 @@
 /* === Global Responsiveness (from previous patch) === */
-/* html, body {
+html, body {
   height: auto !important;
   overflow-y: auto !important;
   overflow-x: hidden;
-} */
-
-html, body {
-  height: 100%;
-  overflow-x: hidden;
 }
+
 body {
   position: relative;
 }
