@@ -428,7 +428,19 @@ h3 {
     max-width: 120px;
     height: auto;
   }
+
+  .contact-links {
+    width: 90%;            /* leave breathing room for buttons */
+    max-width: 1400px;     /* prevents over-stretching on huge screens */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .experience-details .card-title {
+    font-size: 1.35rem;    /* keeps titles readable on large screens */
+  }
 }
+
 
 /* Medium to large screens (992px–1199px) */
 @media (max-width: 1199px) {
