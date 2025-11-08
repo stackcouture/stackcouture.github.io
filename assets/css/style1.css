@@ -1690,40 +1690,31 @@ small {
     color: #fff !important;
 }
 
-/* Responsive flex layout for contact links */
 .contact-card .contact-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 16px;
+    justify-content: center;
 }
 
 /* Mobile stacked */
-@media (max-width: 991px) {
-    .contact-card .contact-links {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 991px) {
+    .contact-card .contact-item {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
-/* 2 per row for tablets/desktops */
-@media (min-width: 992px) and (max-width: 1399px) {
-    .contact-card .contact-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media screen and (min-width: 992px) and (max-width: 1399px) {
     .contact-card .contact-item {
-        flex: 1 1 calc(50% - 16px); /* 2 per row */
+        flex: 1 1 calc(50% - 16px);
         max-width: calc(50% - 16px);
-        text-align: center;
     }
 }
 
-/* 4 per row for extra-large screens */
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
     .contact-card .contact-item {
-        flex: 1 1 calc(25% - 16px); /* 4 per row */
+        flex: 1 1 calc(25% - 16px);
         max-width: calc(25% - 16px);
-        text-align: center;
     }
 }
