@@ -428,6 +428,15 @@ h3 {
     max-width: 120px;
     height: auto;
   }
+
+  .contact-links {
+    flex-wrap: nowrap;      /* keep on single line for large screens */
+  }
+  
+  .contact-item {
+    white-space: nowrap;    /* prevent internal wrapping */
+    flex: 0 1 auto;         /* allow shrinking slightly if needed */
+  }
   
 }
 
@@ -1171,6 +1180,16 @@ small {
     padding: 0px 5px;
   }
 
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-item {
+    width: 100%;
+    text-align: center;
+  }
+
     }
 
     /* ==== Project Card Enhancements ==== */
@@ -1450,11 +1469,11 @@ small {
 
 .contact-links {
   display: flex;
-  flex-wrap: nowrap;           /* force one line */
-  justify-content: center;
+  flex-wrap: wrap;          /* allow wrapping on smaller screens */
+  justify-content: center;  /* center horizontally */
   align-items: center;
   gap: 16px;
-  width: 90%;                  /* gives breathing room */
+  width: 100%;              /* full width of parent */
   max-width: 1400px;
   margin: 20px auto;
 }
@@ -1463,15 +1482,22 @@ small {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border-radius: 30px;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  white-space: nowrap;         /* prevents text from breaking */
-  flex-shrink: 1;              /* allows button to shrink if needed */
-  min-width: 0;                /* prevents overflow inside flex container */
+  white-space: normal;      /* allow wrapping of text inside button */
+  min-width: 0;             /* prevent overflow from flex container */
+  word-break: break-word;   /* break long text if needed */
+  flex: 1 1 auto;           /* allow buttons to grow/shrink naturally */
+  text-align: center;
 }
+
+.contact-item i {
+  flex-shrink: 0;
+}
+
 
 .contact-item.btn-gradient {
   font-size: 0.9rem;     /* slightly smaller font */
