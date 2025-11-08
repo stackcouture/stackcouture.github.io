@@ -362,6 +362,11 @@ h3 {
   top: 15px;
 }
 
+.card a {
+    color: #fff !important; /* always white */
+    margin-right: 20px;
+}
+
 .card li a {
   margin-right: 0;
   color: #333;
