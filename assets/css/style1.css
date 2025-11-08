@@ -1218,6 +1218,21 @@ small {
   transition: transform 0.3s ease;
 }
 
+.docs-card .docs-title {
+  color: #004d40;               /* Deep teal for professional tone */
+  font-size: 1.25rem;           /* Balanced heading size */
+  font-weight: 600;             /* Medium boldness */
+  margin-bottom: 10px;          /* Adds space below title */
+  letter-spacing: 0.3px;        /* Slight letter spacing for clarity */
+}
+
+.docs-card .docs-description {
+  color: #555;                  /* Softer gray for readability */
+  font-size: 0.95rem;           /* Comfortable reading size */
+  line-height: 1.5;             /* Good line spacing */
+  margin-top: 5px;              /* Small buffer for visual balance */
+}
+
 .docs-card .card-image img:hover {
   transform: scale(1.05); /* Subtle hover zoom effect */
 }
