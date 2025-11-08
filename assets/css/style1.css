@@ -499,11 +499,6 @@ h3 {
     width: 90%;         /* full card width */
     object-fit: cover;
   }
-
-  .contact-item.btn-gradient {
-    font-size: 0.85rem;
-    padding: 6px 14px;
-  }
 }
 
 .overlay {
@@ -1067,43 +1062,6 @@ small {
     animation: fadeIn 0.6s ease;
 }
 
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;            /* allow wrapping */
-  justify-content: center;     /* center horizontally */
-  gap: 16px;                   /* spacing between buttons */
-  margin-top: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-item {
-  flex: 1 1 calc(50% - 16px); /* default: 2 per row */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(90deg, #009688, #00796b);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  min-width: 180px;
-}
-
-.contact-item i {
-  margin-right: 8px;
-  font-size: 1.2rem;
-}
-
-.contact-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
   @media (max-width: 768px) {
     .about-card {
       padding: 25px;
@@ -1230,22 +1188,6 @@ small {
     object-fit: cover;
   }
 
- .contact-item {
-    flex: 1 1 100%;
-  }
-
-    }
-
-    @media (max-width: 991px) {
-      .contact-item {
-        flex: 1 1 100%;
-      }
-    }
-
-     @media (min-width: 1400px) {
-      .contact-item {
-        flex: 1 1 calc(25% - 16px);
-      }
     }
 
     /* ==== Project Card Enhancements ==== */
@@ -1396,17 +1338,9 @@ small {
     right: initial;
     top: initial;
   }
-   .contact-item {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-  }
+
 }
 
-@media (min-width: 1386px) {
-  .contact-item {
-    flex: 1 1 calc(25% - 16px);
-  }
-}
 
 @media (max-width: 600px) {
   h2 {
@@ -1524,11 +1458,6 @@ small {
     width: 70%;
     max-height: 100px;
   }
-
-  .contact-item {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1547,21 +1476,6 @@ small {
   bottom: 0;
 }
 
-
-@media (max-width: 600px) {
-  .contact-item {
-    flex: 1 1 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .contact-item.btn-gradient {
-    width: 100%;
-    max-width: 320px;
-    margin: 4px auto;
-    font-size: 0.85rem;
-  }
-}
 
 /* Education details styling */
 .education-details {
@@ -1754,4 +1668,62 @@ small {
   #intro .tagline {
     max-width: 800px;
   }
+}
+
+/* Force contact links in .contact-card to white */
+.contact-card .contact-item {
+    color: #fff !important;      /* white text */
+    background: linear-gradient(90deg, #009688, #00796b); /* your button gradient */
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Optional: keep icons white */
+.contact-card .contact-item i {
+    color: #fff !important;
+}
+
+/* Responsive flex layout for contact links */
+.contact-card .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Mobile stacked */
+@media (max-width: 991px) {
+    .contact-card .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 2 per row for tablets/desktops */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .contact-card .contact-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-card .contact-item {
+        flex: 1 1 calc(50% - 16px); /* 2 per row */
+        max-width: calc(50% - 16px);
+        text-align: center;
+    }
+}
+
+/* 4 per row for extra-large screens */
+@media (min-width: 1400px) {
+    .contact-card .contact-item {
+        flex: 1 1 calc(25% - 16px); /* 4 per row */
+        max-width: calc(25% - 16px);
+        text-align: center;
+    }
 }
