@@ -428,17 +428,7 @@ h3 {
     max-width: 120px;
     height: auto;
   }
-
-  .contact-links {
-    width: 90%;            /* leave breathing room for buttons */
-    max-width: 1400px;     /* prevents over-stretching on huge screens */
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .experience-details .card-title {
-    font-size: 1.35rem;    /* keeps titles readable on large screens */
-  }
+  
 }
 
 
@@ -1458,27 +1448,29 @@ small {
   }
 }
 
-/* Contact buttons — one row on desktop, responsive on mobile */
 .contact-links {
   display: flex;
-  flex-wrap: wrap;            /* allows wrapping on small screens */
-  justify-content: center;    /* center align all links */
+  flex-wrap: nowrap;           /* force one line */
+  justify-content: center;
   align-items: center;
-  gap: 16px;                  /* even spacing between buttons */
-  margin-top: 20px;
+  gap: 16px;
+  width: 90%;                  /* gives breathing room */
+  max-width: 1400px;
+  margin: 20px auto;
 }
 
 .contact-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 30px;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: all 0.3s ease;
-  white-space: nowrap;        /* prevents icon + text from breaking */
+  white-space: nowrap;         /* prevents text from breaking */
+  flex-shrink: 1;              /* allows button to shrink if needed */
+  min-width: 0;                /* prevents overflow inside flex container */
 }
 
 .contact-item.btn-gradient {
