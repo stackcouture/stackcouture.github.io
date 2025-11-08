@@ -1670,53 +1670,39 @@ small {
   }
 }
 
-/* Force contact links in .contact-card to white */
-.contact-card .contact-item {
-    color: #fff !important;      /* white text */
-    background: linear-gradient(90deg, #009688, #00796b); /* your button gradient */
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-/* Optional: keep icons white */
-.contact-card .contact-item i {
-    color: #fff !important;
-}
-
-.contact-card .contact-links {
+.contact-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-}
+    justify-content: flex-start; /* align left for professional look */
+    gap: 12px;
+    margin-top: 20px;
+  }
 
-/* Mobile stacked */
-@media screen and (max-width: 991px) {
-    .contact-card .contact-item {
-        flex: 1 1 100%;
-        max-width: 100%;
+  /* Individual Link Styling */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
+    color: #000; /* professional black */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-item i {
+    font-size: 1rem;
+    color: #00796b; /* subtle icon color */
+  }
+
+  /* Hover effect */
+  .contact-item:hover {
+    color: #00796b; /* change text color slightly on hover */
+  }
+
+  /* Responsive Wrapping */
+  @media screen and (max-width: 600px) {
+    .contact-links {
+      flex-direction: column;
+      gap: 10px;
     }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1399px) {
-    .contact-card .contact-item {
-        flex: 1 1 calc(50% - 16px);
-        max-width: calc(50% - 16px);
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    .contact-card .contact-item {
-        flex: 1 1 calc(25% - 16px);
-        max-width: calc(25% - 16px);
-    }
-}
-
-
+  }
