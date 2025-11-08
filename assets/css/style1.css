@@ -1206,7 +1206,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px; /* Adds breathing space */
+  padding: 5px; /* Adds breathing space */
   background-color: #fafafa; /* Optional, keeps it neat */
 }
 
@@ -1222,7 +1222,7 @@ small {
   color: #004d40;               /* Deep teal for professional tone */
   font-size: 1.25rem;           /* Balanced heading size */
   font-weight: 600;             /* Medium boldness */
-  margin-bottom: 10px;          /* Adds space below title */
+  margin-bottom: 6px;          /* Adds space below title */
   letter-spacing: 0.3px;        /* Slight letter spacing for clarity */
 }
 
