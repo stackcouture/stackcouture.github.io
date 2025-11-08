@@ -336,6 +336,25 @@ h3 {
   padding: 0 10px;
 }
 
+#intro .tagline {
+  text-align: left;
+  max-width: 100%;
+}
+
+/* On large screens, keep text left-aligned and comfortably wide */
+@media (min-width: 1200px) {
+  #intro .tagline {
+    max-width: 900px;   /* limits line length for readability */
+    text-align: left;   /* ensures no centering */
+    margin-left: 0;     /* aligns with heading */
+  }
+
+  #intro .col-md-9 {
+    display: flex;
+    justify-content: flex-start; /* aligns entire text block left */
+  }
+}
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
