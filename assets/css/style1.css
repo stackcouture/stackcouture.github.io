@@ -399,6 +399,12 @@ h3 {
     display: flex;
     justify-content: flex-start;
   }
+
+   #projects .card-image img {
+    width: 100%;         /* fill the card width */
+    height: auto;        /* maintain aspect ratio */
+    object-fit: cover;   /* cover the container without distortion */
+  }
 }
 
 /* On large screens, keep text left-aligned and comfortably wide */
@@ -496,6 +502,12 @@ h3 {
     padding: 0px 20px;
     min-height: 100vh;           /* keep full height on smaller screens */
     margin-bottom: -64px;
+  }
+
+   #projects .card-image img {
+    height: 180px;       /* slightly smaller image height */
+    width: 100%;         /* full card width */
+    object-fit: cover;
   }
 }
 
@@ -1196,6 +1208,12 @@ small {
   .contact-item {
     width: 100%;
     text-align: center;
+  }
+
+  #projects .card-image img {
+    height: 150px;       /* more compact for mobile screens */
+    width: 100%;         /* full width */
+    object-fit: cover;
   }
 
     }
