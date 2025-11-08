@@ -1,14 +1,26 @@
 /* === Global Responsiveness (from previous patch) === */
-html, body {
+/* html, body {
   height: auto !important;
   overflow-y: auto !important;
   overflow-x: hidden;
+} */
+
+html {
+  scroll-behavior: smooth; /* optional */
+  box-sizing: border-box;  /* easier to manage widths */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-  position: relative;
+  min-height: 100%;       /* lets content grow naturally */
+  overflow-x: hidden;     /* prevent horizontal scroll */
+  margin: 0;              /* remove default margin */
+  padding: 0;
+  position: relative;     /* only needed if you have absolute children */
 }
-
 
 .section.full-height {
   min-height: 100vh;
