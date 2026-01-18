@@ -108,6 +108,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   .card-action-text {
+    display: flex;
+    flex-wrap: wrap;      /* allows wrap if screen is small */
+    gap: 6px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* .card-action-text {
     font-size: 1.15rem;
     color: #004d40;
     font-weight: 600;
@@ -115,12 +123,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-left: 3px solid #009688;
     padding-left: 10px;
     letter-spacing: 0.3px;
-  }
+  } */
 
-  .card-action-text span {
+  /* .card-action-text span {
     color: #5d4037;
     font-weight: 500;
-  }
+  } */
 
   .horizontal-card {
   margin-bottom: 2rem;
@@ -177,11 +185,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border-top: 1px solid #ddd;
 }
 
-.card-action-text {
+/* .card-action-text {
   font-size: 1rem;
   color: #004d40;
   font-weight: 500;
-}
+} */
 
 .horizontal-card {
   width: 100%;
@@ -384,7 +392,12 @@ Earlier in my career, I worked on backend and full-stack systems using MySQL and
     <!-- === Experience 1: Prodapt === -->
     <div class="card horizontal-card">
       <div class="card-footer">
-        <p class="card-action-text">Prodapt Solutions Private Limited | <span class="role">Senior Software Engineer</span> Oct 2021 – Nov 2024 <span>| Bengaluru, India</span></p>
+      <p class="card-action-text">
+        Prodapt Solutions Private Limited |
+        <span class="role">Senior Software Engineer</span> |
+        Oct 2021 – Nov 2024 |
+        <span class="location">Bengaluru, India</span>
+      </p>
       </div>
       <div class="card-content">
         
