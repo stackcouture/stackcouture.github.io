@@ -1630,6 +1630,13 @@ small {
     font-weight: bold;
 }
 
+.exp-heading {
+  padding: 0px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
 
 /* Responsive tweaks for small screens */
 @media (max-width: 600px) {
