@@ -1633,10 +1633,15 @@ small {
 .exp-heading {
   padding: 0px 10px;
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 15px 0px;
 }
 
+.technologies {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 12px;
+}
 
 
 /* Responsive tweaks for small screens */
