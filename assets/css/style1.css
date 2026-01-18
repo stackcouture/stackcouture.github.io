@@ -1624,6 +1624,12 @@ small {
     color: inherit;            /* text keeps body color */
 }
 
+.exp-section-head {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 /* Responsive tweaks for small screens */
 @media (max-width: 600px) {
     .contact-links {
