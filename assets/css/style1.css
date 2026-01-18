@@ -468,11 +468,11 @@ h3 {
 }
 
 .card .card-content {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .card .card-content p {
-  padding: 5px 0 0;
+  padding: 5px 10px
 }
 
 .card h5 {
@@ -857,6 +857,7 @@ small {
 
   .intro, .outro {
     font-weight: 500;
+    font-family: 'Roboto';
   }
 
   .caption {
