@@ -1630,6 +1630,13 @@ small {
     font-family: 'Roboto';
 }
 
+.project-section-head {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: bold;
+} 
+
 .exp-heading {
   padding: 0px 10px;
   font-size: 16px;
