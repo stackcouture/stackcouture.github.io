@@ -1637,6 +1637,14 @@ small {
   font-weight: bold;
 } 
 
+.project-exp-heading {
+  font-weight: 800;
+  font-size: 16px;
+  display: table-cell;
+  font-family: 'Roboto';
+  color: #555;
+}
+
 .exp-heading {
   padding: 0px 10px;
   font-size: 16px;
