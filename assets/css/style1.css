@@ -1637,6 +1637,13 @@ small {
   margin: 15px 0px;
 }
 
+.company-div {
+  border: none;
+  height: 3px;
+  background-color: #00796b;
+  margin: 20px 0;
+}
+
 .technologies {
   font-size: 15px;
   font-weight: bold;
