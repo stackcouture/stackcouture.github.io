@@ -826,8 +826,8 @@ small {
     margin-bottom: 20px;
   }
 
-  .highlight {
-    color: #009688;
+  .highlight a{
+    color: #009688 !important;
     font-weight: 600;
   }
 
@@ -925,8 +925,8 @@ small {
     margin-bottom: 20px;
   }
 
-  .highlight {
-    color: #009688;
+  .highlight a{
+    color: #009688 !important;
     font-weight: 600;
   }
 
