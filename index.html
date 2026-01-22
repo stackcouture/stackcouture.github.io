@@ -458,26 +458,27 @@ Earlier in my career, I worked on backend and full-stack systems using MySQL and
           <hr class="company-div"/>
           <p class="exp-heading">Role Overview</p>
            <p class="exp-section-head">
-            Designed and operated containerized delivery platforms for cloud-hosted applications, focusing on reliable releases and operational consistency
+            Designed, operated, and stabilized containerized delivery platforms on AWS, owning CI/CD pipelines, Kubernetes workloads, GitOps delivery and production incident resolution across multiple environments
           </p>
           <p class="exp-heading">Responsibilities &amp; Ownership</p>
           <ul class="browser-default">
-            <li>Built and maintained production-ready Docker images, optimizing Dockerfiles for consistent and predictable deployments</li>
-            <li>Designed and operated Jenkins CI/CD pipelines for build, test, artifact publishing and deployment workflows</li>
+            <li>Built and ran CI/CD pipelines with Jenkins and GitHub Actions, integrating Maven, SonarQube, Trivy, Nexus and Amazon ECR</li>
+            <li>Operated AWS EKS workloads using Helm and Argo CD with GitOps and blue/green deployments across environments</li>
             <li>Provisioned and managed AWS infrastructure using Terraform, including EC2, IAM and VPC networking</li>
             <li>Managed Kubernetes deployments, handling rollouts, configuration updates, scaling and rollbacks</li>
+            <li>Handled production incidents involving networking, load balancers, firewalls and resource exhaustion with RCA</li>
             <li>Implemented monitoring and dashboards using Prometheus and Grafana to improve visibility and issue detection</li>
           </ul>
           <p class="exp-heading">Key Learnings</p>
           <ul>
-            <li>Designing Docker images that balance reliability, size, and portability</li>
-            <li>Evaluating CI/CD trade-offs between deployment speed and operational safety</li>
-            <li>Applying Infrastructure as Code for repeatable and auditable cloud changes</li>
-            <li>Handling real-world Kubernetes failures, including rollout and configuration issues</li>
-            <li>Using observability to reduce detection time and improve operational response</li>
+            <li>Operating Kubernetes in production requires disciplined resource management, rollout control and failure isolation</li>
+            <li>GitOps enforces auditable, repeatable deployments, but only works when pipelines and manifests are production-hardened</li>
+            <li>CI/CD systems are critical infrastructure, not developer conveniences</li>
+            <li>Observability must drive incident response, not just dashboards</li>
+            <li>Most outages are caused by misconfiguration and resource pressure, not code</li>
           </ul>
           <p class="exp-heading">Technologies</p>
-          <div class="technologies">AWS · Terraform · Docker · Kubernetes · Jenkins · Prometheus · Grafana</div>
+          <div class="technologies">AWS · Terraform · Docker · Kubernetes · Jenkins · Prometheus · Grafana - ArgoCD - Helm</div>
         </div>
       </div>
       <div class="card-footer">
@@ -498,24 +499,27 @@ Earlier in my career, I worked on backend and full-stack systems using MySQL and
           <hr class="company-div"/>
           <p class="exp-heading">Role Overview</p>
            <p class="exp-section-head">
-            Managed and optimized AWS EC2–based application infrastructure across development and production environments, with a focus on availability, fault tolerance and operational reliability
+            Owned and operated AWS-based production infrastructure supporting EC2-hosted applications, with direct responsibility for availability, scaling, monitoring and deployment reliability across development and production environments
           </p>
           <p class="exp-heading">Responsibilities &amp; Ownership</p>
           <ul class="browser-default">
-            <li>Managed EC2-based application deployments across multiple environments, ensuring stability and consistency</li>
-            <li>Refactored deployments to use Auto Scaling Groups and Load Balancers, improving availability and fault tolerance</li>
-            <li>Enhanced CloudWatch monitoring and alarms based on observed failure patterns, reducing time-to-detect for infrastructure issues</li>
-            <li>Managed Route 53 DNS changes during deployments and incidents to ensure minimal service disruption</li>
+            <li>Managed AWS production infrastructure using EC2, VPC, RDS, Auto Scaling Groups, ELB, S3, Route 53 and EBS, ensuring high availability and operational stability</li>
+            <li>Refactored static EC2 deployments into Auto Scaling Groups with Load Balancers and health checks, improving fault tolerance and recovery during instance failures</li>
+            <li>Implemented snapshot-based EBS backups and proactively expanded storage capacity to prevent disk-related outages</li>
+            <li>Designed and maintained secure VPC architectures with public/private subnets, route tables, internet/NAT gateways, NACLs and security groups</li>
+            <li>Built and tuned CloudWatch dashboards and alarms based on real production failure patterns, reducing time-to-detect and response during incidents</li>
+            <li>Managed Route 53 DNS changes during deployments and production incidents to minimize service disruption</li>
+            <li>Built and maintained CI/CD pipelines using Jenkins, Git, and Maven, handling pipeline configuration, plugin management and environment-level failures</li>
           </ul>
           <p class="exp-heading">Key Learnings</p>
           <ul>
-            <li>Designing EC2-based architectures for high availability and resilience</li>
-            <li>Using Auto Scaling and Load Balancing to handle failure scenarios gracefully</li>
-            <li>Leveraging CloudWatch metrics and alarms for proactive infrastructure monitoring</li>
-            <li>Understanding the operational impact of DNS changes during deployments and incidents</li>
+            <li>Designing EC2-based architectures for high availability and resilience under failure conditions</li>
+            <li>Using Auto Scaling and Load Balancing to handle traffic spikes and instance failures gracefully</li>
+            <li>Building monitoring that reflects real operational risk, not vanity metrics</li>
+            <li>Operating CI/CD systems as production infrastructure, not just build scripts</li>
           </ul>
           <p class="exp-heading">Technologies</p>
-          <div class="technologies">AWS · EC2 · EBS · Auto Scaling Groups · Load Balancers · CloudWatch · Route 53</div>
+          <div class="technologies">AWS · EC2 · EBS · Auto Scaling Groups · Load Balancers · CloudWatch · Route 53 - Jenkins - Docker</div>
         </div>
       </div>
       <div class="card-footer">
@@ -535,23 +539,25 @@ Earlier in my career, I worked on backend and full-stack systems using MySQL and
           <hr class="company-div"/>
           <p class="exp-heading">Role Overview</p>
            <p class="exp-section-head">
-            Built and operated backend application services with a focus on deployment reliability, API correctness and performance optimization for user-facing systems
+            Built and operated backend web applications on Linux-based AWS EC2 environments, with hands-on responsibility for deployments, runtime stability and production support
           </p>
           <p class="exp-heading">Responsibilities &amp; Ownership</p>
           <ul class="browser-default">
-            <li>Managed application deployments, DNS configuration and uptime monitoring, maintaining high availability and service reliability</li>
-            <li>Developed and maintained backend services, optimizing database queries to improve performance and system stability</li>
-            <li>Engineered RESTful APIs and integrated third-party payment systems, improving reliability and reducing runtime errors</li>
+            <li>Managed AWS EC2–based Linux environments supporting the development, deployment and operation of web applications</li>
+            <li>Implemented and supported CI/CD pipelines using Jenkins and Maven, enabling consistent builds and repeatable application releases</li>
+            <li>Deployed, configured, and operated web applications on Apache Tomcat and Apache HTTP Server, supporting production runtime stability</li>
+            <li>Managed application deployments, basic DNS configuration and uptime monitoring to maintain service availability</li>
+            <li>Monitored application health and supported incident troubleshooting related to deployments, performance degradation and system outages</li>
           </ul>
           <p class="exp-heading">Key Learnings</p>
           <ul>
-            <li>Designing backend services for availability and operational stability</li>
-            <li>Identifying and optimizing inefficient database queries to improve application performance</li>
-            <li>Building reliable REST APIs with proper error handling and integration safeguards</li>
-            <li>Understanding how deployment and DNS decisions directly impact end-user experience</li>
+            <li>Running applications in production requires as much focus on deployment and stability as on application code</li>
+            <li>CI/CD automation reduces human error but must be maintained like production infrastructure</li>
+            <li>Application performance issues often surface as infrastructure or configuration problems, not just code defects</li>
+            <li>Deployment and DNS changes have immediate and visible impact on end-user experience</li>
           </ul>
           <p class="exp-heading">Technologies</p>
-          <div class="technologies">Backend Services · REST APIs · Databases · DNS · Application Monitoring</div>
+          <div class="technologies">AWS EC2 · Linux · Jenkins · Maven · Apache Tomcat · Apache HTTP Server · DNS · Application Monitoring</div>
         </div>
       </div>
       <div class="card-footer">
