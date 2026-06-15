@@ -12,7 +12,6 @@
 ✔️ Skills \
 ✔️ Education\
 ✔️ Contact Info\
-✔️ Resume
 
 To view a live example, **[click here](https://stackcouture.github.io/)**
 
