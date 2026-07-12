@@ -586,11 +586,12 @@ a.hoverline:hover {
   padding: 15px 10px;
 }
 
-#documents .guide-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #00796b;
-    margin: 0 0 16px;
+#documents .card .card-content .guide-title {
+    display: block;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #00796b !important;
+    margin-bottom: 16px;
     line-height: 1.4;
 }
 
