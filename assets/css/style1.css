@@ -608,6 +608,32 @@ a.hoverline:hover {
     margin-bottom: 8px;
 }
 
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+    border-radius: 10px;
+
+    background: #fff;
+    color: #00796b !important;
+    border: 2px solid #00796b;
+
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #00796b;
+    color: #fff !important;
+    box-shadow: 0 8px 18px rgba(0, 121, 107, 0.25);
+    transform: translateY(-2px);
+}
 
 #skills .responsive-img {
   max-width: 60px;      /* control the size of each icon */
