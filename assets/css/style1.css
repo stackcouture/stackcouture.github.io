@@ -680,6 +680,59 @@ a.hoverline:hover {
 }
 
 
+
+.skills-card{
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    background:linear-gradient(180deg,#fff,#f8fafc);
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+}
+
+.skill-group{
+    padding:20px 0;
+}
+
+.skill-group h5{
+    font-size:22px;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:25px;
+}
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:25px;
+}
+
+.skill-item{
+    text-align:center;
+}
+
+.skill-item img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.skill-item img:hover{
+    transform:scale(1.08);
+}
+
+.skill-item span{
+    display:block;
+    margin-top:10px;
+    font-weight:600;
+    color:#4b5563;
+}
+
+.skills-card hr{
+    border:none;
+    border-top:1px solid #e5e7eb;
+}
+
+
 /* Style for About section */
 #about .skills-box {
   margin-top: 25px;
