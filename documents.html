@@ -164,20 +164,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Main Content-->
   <main>
-<section id="about" class="section scrollspy">
-      <h4 class="page-title">Guide & Reference</h4>
-    
 
-      <div class="container" style="margin-top: 2rem;">
-        <div class="card">
+<section id="projects" class="section scrollspy">
+  <h4 class="page-title">Portfolio Projects</h4>
+  <div class="container">
+    <div class="row">
+      <!-- === Project 6 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/project_gke.png" alt="GKE Platform Project" />
+          </div>
           <div class="card-content">
-
-            
-
+            <span class="card-title activator teal-text hoverline">
+              Production-Grade Kubernetes Platform on GKE
+              <i class="mdi-navigation-more-vert right"></i>
+            </span>
+            <p>Built a production-grade Kubernetes platform on Google Kubernetes Engine (GKE), implementing Infrastructure as Code, GitOps, DevSecOps, CI/CD automation, progressive delivery, observability, autoscaling, and policy-driven security for secure and scalable application delivery.</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <ul>
+              <li>Built production-grade Kubernetes platforms on GKE using Terraform and GitOps</li>
+              <li>Automated CI/CD pipelines with GitHub Actions, Argo CD and Kustomize</li>
+              <li>Implemented DevSecOps using Kyverno, Vault, External Secrets, cert-manager, Trivy, SBOM, and Cosign</li>
+              <li>Enabled progressive delivery, autoscaling, observability, and cost optimization with Argo Rollouts, KEDA, Karpenter, Prometheus, Grafana, and Kubecost</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://github.com/stackcouture/platform-engineering-portfolio" 
+                target="_blank" 
+                class="btn-floating blue-grey tooltipped" 
+                data-tooltip="GitHub Repo">
+                <i class="fa fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- === Project 1 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="/assets/img/devsecops_gitops_2.png" alt="DevSecOps project" class="activator" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">
+              DevSecOps & GitOps Automation<i class="mdi-navigation-more-vert right"></i>
+            </span>
+            <p> DevSecOps & GitOps project for a Java Spring Boot app using Terraform, Jenkins, ArgoCD and EKS to automate CI/CD and Helm-based deployments</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <ul>
+              <li>Built CI/CD pipelines with Terraform, Jenkins, EKS, ArgoCD and Helm</li>
+              <li>Managed Docker images in ECR and Maven builds in Nexus</li>
+              <li>Automated builds and scans using Trivy, SonarQube and Snyk</li>
+              <li>Enabled Slack and email alerts for security and deployment updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Project 4 === -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-image">
+            <img src="/assets/img/ecs_deployment.png" alt="ECS Project" />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator teal-text hoverline">AWS ECS DevOps Project<i class="mdi-navigation-more-vert right"></i></span>
+            <p>Automated ECS deployment using Terraform and Jenkins — integrating Docker, ECR and security scans for scalable, secure and continuous delivery</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <ul>
+              <li>Spearheaded end-to-end CI/CD pipelines using GitHub Actions, Docker, Trivy, Snyk, and AWS ECR for secure image builds and deployments</li>
+              <li>Automated vulnerability scanning and container delivery for production-grade reliability</li>
+              <li>Provisioned and managed ECS infrastructure via Terraform for scalable, secure service deployment</li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
 
 <!-- Eight Section: Contact -->
 
