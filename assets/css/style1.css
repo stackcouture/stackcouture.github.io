@@ -582,10 +582,9 @@ a.hoverline:hover {
   border-bottom: 3px solid #004d40 !important;
 }
 
+
 #documents .card {
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    border-radius: 10px;
     transition: .3s;
 }
 
@@ -593,18 +592,22 @@ a.hoverline:hover {
     transform: translateY(-4px);
 }
 
-#documents .card-content {
-    padding: 24px;
+#documents .guide-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 15px;
 }
 
-#documents .card .card-content .guide-title {
-    display: block;
-    font-size: 1.25rem !important;
-    font-weight: 700 !important;
-    color: #00796b !important;
-    margin-bottom: 16px;
-    line-height: 1.4;
+#documents .card-content ul {
+    padding-left: 20px;
 }
+
+#documents .card-content li {
+    margin-bottom: 8px;
+}
+
 
 #skills .responsive-img {
   max-width: 60px;      /* control the size of each icon */
