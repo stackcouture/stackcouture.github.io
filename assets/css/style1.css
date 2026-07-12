@@ -586,6 +586,12 @@ a.hoverline:hover {
   padding: 15px 10px;
 }
 
+#documents .guide-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00796b !important; 
+}
+
 #skills .responsive-img {
   max-width: 60px;      /* control the size of each icon */
   height: auto;
