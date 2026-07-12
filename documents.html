@@ -166,71 +166,209 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main>
 
 <section id="projects" class="section scrollspy">
-  <h4 class="page-title">Portfolio Projects</h4>
+  <h4 class="page-title">Engineering Guides</h4>
+
   <div class="container">
     <div class="row">
-      <!-- === Project 6 === -->
+
+      <!-- Jenkins -->
       <div class="col s12 m6 l4">
         <div class="card medium">
           <div class="card-content">
-              Production-Grade Kubernetes Platform on GKE
-            <p>Built a production-grade Kubernetes platform on Google Kubernetes Engine (GKE), implementing Infrastructure as Code, GitOps, DevSecOps, CI/CD automation, progressive delivery, observability, autoscaling, and policy-driven security for secure and scalable application delivery.</p>
+            <span class="card-title">Jenkins Engineering Guide</span>
+            <p>
+              Comprehensive engineering guide covering Jenkins architecture,
+              CI/CD pipelines, security, scalability, and production best
+              practices.
+            </p>
+
             <ul>
-              <li>Built production-grade Kubernetes platforms on GKE using Terraform and GitOps</li>
-              <li>Automated CI/CD pipelines with GitHub Actions, Argo CD and Kustomize</li>
-              <li>Implemented DevSecOps using Kyverno, Vault, External Secrets, cert-manager, Trivy, SBOM, and Cosign</li>
-              <li>Enabled progressive delivery, autoscaling, observability, and cost optimization with Argo Rollouts, KEDA, Karpenter, Prometheus, Grafana, and Kubecost</li>
+              <li>Jenkins Architecture & Controller-Agent</li>
+              <li>Declarative & Scripted Pipelines</li>
+              <li>Shared Libraries</li>
+              <li>Maven, Docker & Kubernetes Integration</li>
+              <li>Credentials & Secrets Management</li>
+              <li>Production Best Practices</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- === Project 1 === -->
+      <!-- Kubernetes -->
       <div class="col s12 m6 l4">
         <div class="card medium">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img src="/assets/img/devsecops_gitops_2.png" alt="DevSecOps project" class="activator" />
-          </div>
           <div class="card-content">
-            <span class="card-title activator teal-text hoverline">
-              DevSecOps & GitOps Automation<i class="mdi-navigation-more-vert right"></i>
-            </span>
-            <p> DevSecOps & GitOps project for a Java Spring Boot app using Terraform, Jenkins, ArgoCD and EKS to automate CI/CD and Helm-based deployments</p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <span class="card-title">Kubernetes Engineering Guide</span>
+            <p>
+              Production-focused Kubernetes guide covering architecture,
+              workloads, networking, security, storage, and operations.
+            </p>
+
             <ul>
-              <li>Built CI/CD pipelines with Terraform, Jenkins, EKS, ArgoCD and Helm</li>
-              <li>Managed Docker images in ECR and Maven builds in Nexus</li>
-              <li>Automated builds and scans using Trivy, SonarQube and Snyk</li>
-              <li>Enabled Slack and email alerts for security and deployment updates</li>
+              <li>Cluster Architecture</li>
+              <li>Pods, Deployments & ReplicaSets</li>
+              <li>Services & Ingress</li>
+              <li>Storage & StatefulSets</li>
+              <li>RBAC & Network Policies</li>
+              <li>Autoscaling & Troubleshooting</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- === Project 4 === -->
+      <!-- Helm -->
       <div class="col s12 m6 l4">
         <div class="card medium">
-          <div class="card-image">
-            <img src="/assets/img/ecs_deployment.png" alt="ECS Project" />
-          </div>
           <div class="card-content">
-            <span class="card-title activator teal-text hoverline">AWS ECS DevOps Project<i class="mdi-navigation-more-vert right"></i></span>
-            <p>Automated ECS deployment using Terraform and Jenkins — integrating Docker, ECR and security scans for scalable, secure and continuous delivery</p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+            <span class="card-title">Helm Engineering Guide</span>
+            <p>
+              Practical guide for packaging, deploying, and managing Kubernetes
+              applications using Helm in production.
+            </p>
+
             <ul>
-              <li>Spearheaded end-to-end CI/CD pipelines using GitHub Actions, Docker, Trivy, Snyk, and AWS ECR for secure image builds and deployments</li>
-              <li>Automated vulnerability scanning and container delivery for production-grade reliability</li>
-              <li>Provisioned and managed ECS infrastructure via Terraform for scalable, secure service deployment</li>
+              <li>Helm Architecture</li>
+              <li>Chart Development</li>
+              <li>Templates & Values</li>
+              <li>Dependencies</li>
+              <li>Release Management</li>
+              <li>Rollbacks & Best Practices</li>
             </ul>
-            
           </div>
         </div>
       </div>
 
+      <!-- Argo CD -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">Argo CD Engineering Guide</span>
+            <p>
+              Complete GitOps implementation guide for automated Kubernetes
+              deployments using Argo CD.
+            </p>
+
+            <ul>
+              <li>GitOps Principles</li>
+              <li>Applications & AppProjects</li>
+              <li>ApplicationSets</li>
+              <li>Sync Strategies</li>
+              <li>Multi-Environment Deployments</li>
+              <li>Security & RBAC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terraform -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">Terraform Engineering Guide</span>
+            <p>
+              Enterprise Infrastructure as Code guide covering reusable modules,
+              state management, cloud provisioning, and automation.
+            </p>
+
+            <ul>
+              <li>Providers & Variables</li>
+              <li>Reusable Modules</li>
+              <li>Remote State</li>
+              <li>Workspaces</li>
+              <li>AWS & GCP Provisioning</li>
+              <li>CI/CD Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS Load Balancer -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">AWS Load Balancer Guide</span>
+            <p>
+              Comprehensive guide explaining AWS load balancing services,
+              traffic routing, scalability, and high availability.
+            </p>
+
+            <ul>
+              <li>ALB & NLB</li>
+              <li>Target Groups</li>
+              <li>Health Checks</li>
+              <li>SSL Termination</li>
+              <li>Routing Strategies</li>
+              <li>Production Architecture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amazon S3 -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">Amazon S3 Engineering Guide</span>
+            <p>
+              Complete guide covering Amazon S3 architecture, security,
+              lifecycle management, hosting, and automation.
+            </p>
+
+            <ul>
+              <li>Buckets & Object Storage</li>
+              <li>Versioning</li>
+              <li>Lifecycle Policies</li>
+              <li>Static Website Hosting</li>
+              <li>Replication</li>
+              <li>Security & Encryption</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disaster Recovery -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">Disaster Recovery Engineering Guide</span>
+            <p>
+              Practical guide covering backup strategies, business continuity,
+              disaster recovery planning, and cloud resilience.
+            </p>
+
+            <ul>
+              <li>RTO & RPO</li>
+              <li>Backup Strategies</li>
+              <li>Multi-AZ & Multi-Region</li>
+              <li>Infrastructure Recovery</li>
+              <li>Kubernetes Backup</li>
+              <li>Business Continuity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linux -->
+      <div class="col s12 m6 l4">
+        <div class="card medium">
+          <div class="card-content">
+            <span class="card-title">UNIX/Linux Administration Guide</span>
+            <p>
+              Hands-on Linux administration guide covering system management,
+              automation, networking, monitoring, and troubleshooting.
+            </p>
+
+            <ul>
+              <li>Linux Commands</li>
+              <li>Users & Permissions</li>
+              <li>Networking</li>
+              <li>Shell Scripting</li>
+              <li>Cron Jobs</li>
+              <li>Performance Tuning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
