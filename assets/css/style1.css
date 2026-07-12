@@ -597,7 +597,7 @@ a.hoverline:hover {
     padding: 24px;
 }
 
-#documents .guide-title {
+#documents .card .card-content .guide-title {
     display: block;
     font-size: 1.25rem !important;
     font-weight: 700 !important;
