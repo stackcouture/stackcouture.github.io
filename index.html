@@ -241,6 +241,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   flex: 1; /* fills remaining width */
 }
 
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.skills-row .col {
+    flex: 1;
+    max-width: 120px;
+    text-align: center;
+}
+
+.skills-row img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .horizontal-content {
     flex-direction: column;
@@ -911,7 +931,7 @@ I enjoy solving complex infrastructure challenges and building internal platform
         </div>
 
         <h4 class="skill-category-title">DevSecOps & Security</h4>
-        <div class="row text-center">
+        <div class="skills-row">
 
           <div class="col s6 m4 l3">
             <img src="/assets/img/trivy-logo.png" alt="Trivy" class="responsive-img">
