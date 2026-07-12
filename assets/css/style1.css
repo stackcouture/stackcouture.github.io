@@ -1769,13 +1769,25 @@ small {
 }
 
 #intro.section .card {
-  width: 100%;
+  /* width: 100%;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
   color: #444;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
+
+  width: 100%;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f5f7fb 50%,
+      #eef4ff 100%
+  );
+  border: 1px solid #dbeafe;
+  box-shadow: 0 15px 35px rgba(59,130,246,.08);
 }
 
 #intro.section .caption h4 {
