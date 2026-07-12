@@ -21,6 +21,8 @@ body {
   padding: 0;
   position: relative;     /* only needed if you have absolute children */
   background: #0F172A !important;
+  color: #333;
+  font-size: 18px;
 }
 
 .section.full-height {
@@ -165,11 +167,6 @@ body {
 /* main body */
 
 /* body-color */
-
-body {
-  color: #333;
-  font-size: 18px;
-}
 
 /* body {
   color: black;
