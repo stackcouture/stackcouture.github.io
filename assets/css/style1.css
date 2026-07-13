@@ -1061,12 +1061,12 @@ small {
   }
 
 .page-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-align: left;
   color: #ffffff;
   background-color: #008073;
-  padding: 12px 10px;
+  padding: 5px 10px;
   margin-bottom: 10px;
   border-left: 6px solid #00bfa5;
   border-radius: 5px;
