@@ -1685,9 +1685,10 @@ small {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Wraps on smaller screens */
-    margin-top: 20px;
+    gap: 2px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    font-size: 13px;
 }
 
 .contact-item {
