@@ -1738,6 +1738,46 @@ small {
     color: inherit;            /* text keeps body color */
 }
 
+/* Large Desktop (≥1200px) */
+@media (min-width: 1200px) {
+    .contact-links {
+        gap: 30px;
+        font-size: 14px;
+    }
+}
+
+/* Laptop & Tablet (768px–1199px) */
+@media (max-width: 1199px) {
+    .contact-links {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .contact-item span {
+        font-size: 12px;
+    }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+    .contact-links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-item span {
+        font-size: 12px;
+        word-break: break-word;
+        text-align: center;
+    }
+}
+
 .exp-section-head {
     margin-top: 10px;
     font-size: 15px;
