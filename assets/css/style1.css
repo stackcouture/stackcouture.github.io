@@ -1061,21 +1061,21 @@ small {
   }
 
 .page-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-align: left;
-  color: #ffffff;
-  background-color: #008073;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border-left: 6px solid #00bfa5;
-  border-radius: 5px;
-  letter-spacing: 0.5px;
-  text-transform: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  font-family: "Poppins", "Inter", sans-serif;
-  animation: fadeIn 0.6s ease;
-  line-height: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    color: #ffffff;
+    background-color: #008073;
+    padding: 16px 15px;
+    margin-bottom: 10px;
+    border-left: 6px solid #00bfa5;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", "Inter", sans-serif;
+    animation: fadeIn 0.6s ease;
+    line-height: 5px;
 }
 
   @media (max-width: 768px) {
@@ -1983,7 +1983,7 @@ section,
 
 .page-title {
     margin-top: 0 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 20px !important;
 }
 
 .education-card,
