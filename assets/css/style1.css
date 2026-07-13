@@ -1673,12 +1673,39 @@ small {
 }
 
 /* Container for all contact links */
+/* .contact-links {
+    display: flex;
+    justify-content: center;   
+    flex-wrap: wrap;           
+    gap: 20px;                 
+    margin-top: 20px;
+} */
+
 .contact-links {
     display: flex;
-    justify-content: center;   /* centers all items horizontally */
-    flex-wrap: wrap;           /* allows wrapping on smaller screens */
-    gap: 20px;                 /* spacing between each contact item */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Wraps on smaller screens */
     margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+
+.contact-item i {
+    color: #009688;
+    font-size: 1.2rem;
+}
+
+.contact-item:hover {
+    color: #009688;
 }
 
 /* Each contact item */
