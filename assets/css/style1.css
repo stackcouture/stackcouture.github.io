@@ -1954,3 +1954,41 @@ small {
     font-size: 0.95rem;
   }
 }
+
+/* ===========================================================
+   Global Section Spacing Override
+   =========================================================== */
+
+section,
+.section {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 5px !important;
+}
+
+.container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.card {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+.page-title {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.education-card,
+.horizontal-card,
+.medium,
+.large {
+    margin-bottom: 10px !important;
+}
